@@ -1,0 +1,7 @@
+.section{
+        display: "flex";
+        gap : "10px";
+        background: "black";
+        color: "white";
+        text-align: "left";
+}

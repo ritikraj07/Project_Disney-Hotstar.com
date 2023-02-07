@@ -1,5 +1,13 @@
+import Style from "../CSS/Bannercard.module.css"
 function Bannercard() {
-      return (
+  const BannerSection = {
+    display: "flex",
+    gap: "10px",
+    background: "black",
+    color: "white",
+    textAlign: "left"
+  };
+  return (
     <section style={BannerSection}>
       <div style={{ width: "40%", margin: "auto", padding: "20px" }}>
         <h2>Black Panthar : Wakanda Forever</h2>
