@@ -6,8 +6,8 @@ background-image: linear-gradient(to right,
                         grid-template-columns: repeat(2,1fr);
                         gap:5px;
                         color: rgb(214, 202, 202);
-                        width: 99%;
-                        margin:05px auto;
+                        margin: 0px 5px;
+
 }
 
 
