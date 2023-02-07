@@ -1,32 +1,17 @@
 import Style from "../CSS/Bannercard.module.css"
 function Bannercard() {
-  const BannerSection = {
-    display: "flex",
-    gap: "10px",
-    background: "black",
-    color: "white",
-    textAlign: "left"
-  };
-  return (
-    <section style={BannerSection}>
-      <div style={{ width: "40%", margin: "auto", padding: "20px" }}>
-        <h2>Black Panthar : Wakanda Forever</h2>
-        <p>Action : 2022</p>
-        <h4>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus
-          quae vero consectetur corrupti, suscipit quos eos nam minus expedita,
-          quod inventore omnis voluptate voluptatem veniam sunt aliquid dicta
-          fuga unde.
-        </h4>
+    return (
+      <div className={Style.Container}>
+        <div className={Style.child}>
+          <h2>Black Panther : Wakanda Forever</h2> 
+          <p>Actio : 2022</p>
+          <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, sint autem sapiente quasi natus atque ratione quam, totam veritatis animi est odit minima. Distinctio perferendis repellendus iste sapiente nostrum quod?</h3>
+            </div>
+            <div className={Style.child2}>
+                {/* <img src="https://images7.alphacoders.com/128/1280283.jpg" alt="" className={ Style.Container} /> */}
+            </div>    
       </div>
-      <div style={{ width: "60%", margin: "auto" }}>
-        <img
-          src="https://terrigen-cdn-dev.marvel.com/content/prod/1x/blackpantherwakandaforever_lob_mas_mob_04.jpg"
-          alt=""
-          style={{ width: "100%" }}
-        />
-      </div>
-    </section>
+
   );
 }
 export default Bannercard;
