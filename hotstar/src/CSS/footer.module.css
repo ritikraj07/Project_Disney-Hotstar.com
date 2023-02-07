@@ -1,0 +1,8 @@
+.Footer{
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.Footer > div{
+    width: 50%;
+}
