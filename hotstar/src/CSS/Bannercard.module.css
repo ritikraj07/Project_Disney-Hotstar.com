@@ -26,3 +26,39 @@ background-image: linear-gradient(to right,
         border: none;
         opacity: 0.9;
 }
+.child3{
+        background-image: url("../Images/BannerImages/Raid.jpg");
+                height: 400px;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                border: none;
+                opacity: 0.9;
+}
+.child4{
+        background-image: url("../Images/BannerImages/Fursat.jpg");
+                height: 400px;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                border: none;
+                opacity: 0.9;
+}
+.child5 {
+        background-image: url("../Images/BannerImages/MSDHONI.jpg");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        opacity: 0.9;
+}
+.child6 {
+        background-image: url("../Images/BannerImages/sembi.jpg");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        opacity: 0.9;
+}
