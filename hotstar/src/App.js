@@ -1,12 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 import Landing from './Pages/landing';
+import Subscribe from './Pages/Subscribe';
 
 
 
 function App() {
   return (
-   <Landing />
+    <div>
+      {/* <Landing /> */}
+      <Subscribe />
+    </div>
+
   );
 }
 

@@ -1,0 +1,103 @@
+.Navigation-bar {
+    color: rgb(139, 221, 31);
+
+}
+
+.sub_div {
+    background-color: rgb(25, 33, 50);
+    color: white;
+    margin: auto;
+    width: 56%;
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.continue-button {
+    background: rgb(31, 128, 224);
+    border-radius: 4px;
+    width: 100%;
+    color: white;
+    border: none;
+    padding: 5px ;
+    margin-top: 12px;
+
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.hotstar_logo {
+    margin-left: 43px;
+    margin-top: 18px;
+}
+
+#lang {
+    margin-left: 930px;
+    padding: 7px 15px;
+    color: white;
+    background-color: transparent;
+    border-radius: 2px;
+}
+
+.loginbutton {
+    margin-right: -300px;
+    padding: 7px 15px;
+    background-color: rgb(31, 128, 224);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+table {
+    border-collapse: collapse;
+
+}
+
+td {
+    border-bottom: 1px solid #202731;
+    padding: 10px;
+
+}
+
+td>img {
+
+    width: 25px;
+}
+
+td>h6 {
+
+    margin-top: 1px;
+    color: rgb(28, 95, 164);
+    margin-bottom: 2px;
+}
+
+.planbutton>button {
+    border: 1px solid #334366;
+    background-color: transparent;
+    width: 35%;
+    height: 80px;
+    border-radius: 5px;
+
+
+}
+
+.planbutton {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+
+.planbutton h2 {
+    border: 1px solid red;
+   
+}
+
+.planbutton h3 {
+    border: 1px solid red;
+margin-top: -50px;
+}
