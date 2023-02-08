@@ -1,9 +1,16 @@
+body{
+    background-image: linear-gradient(rgb(12,17,27), rgb(19,19,25));
+}
 .Navigation-bar {
     color: rgb(139, 221, 31);
-
+    position: fixed;
+    top: 0;
+    width: 100%;
+    
 }
 
 .sub_div {
+
     background-color: rgb(25, 33, 50);
     color: white;
     margin: auto;
@@ -18,12 +25,12 @@
     width: 100%;
     color: white;
     border: none;
-    padding: 5px ;
+    padding: 5px;
     margin-top: 12px;
 
 }
 
-h2 {
+.heading {
     color: white;
     text-align: center;
     margin-top: 70px;
@@ -34,12 +41,17 @@ h2 {
     margin-top: 18px;
 }
 
-#lang {
+select {
     margin-left: 930px;
     padding: 7px 15px;
     color: white;
     background-color: transparent;
     border-radius: 2px;
+}
+
+select option {
+    color: white;
+    background-color: transparent;
 }
 
 .loginbutton {
@@ -56,6 +68,8 @@ table {
     border-collapse: collapse;
 
 }
+
+
 
 td {
     border-bottom: 1px solid #202731;
@@ -83,6 +97,7 @@ td>h6 {
     border-radius: 5px;
 
 
+
 }
 
 .planbutton {
@@ -93,11 +108,14 @@ td>h6 {
 }
 
 .planbutton h2 {
-    border: 1px solid red;
-   
+    text-align: left;
+    margin: 0px;
+    color: white;
+
 }
 
 .planbutton h3 {
-    border: 1px solid red;
-margin-top: -50px;
+    text-align: left;
+    margin-top: 0px;
+    color: white;
 }
