@@ -1,0 +1,24 @@
+.cardlistdiv{
+     display: flex;
+    align-items: stretch;
+    position: relative;
+    overflow:scroll;
+    white-space: nowrap;
+    /* margin: 0 1.5rem; */
+    padding: 1rem;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+}
+.title{
+    color:white
+}
+.listwrapper{
+    position: relative;   
+}
+
+.cardlistdiv>*{
+    scroll-snap-align:start;
+    
+}

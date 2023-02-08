@@ -2,6 +2,12 @@
   position: relative;
   width: 138px;
   cursor: pointer;
+  transition: all 0.5s ease-in;
+  margin: 20px;
+}
+.cardDiv:hover{
+  transform: scale(1.25);
+  
 }
 .cardImg {
   width: 100%;

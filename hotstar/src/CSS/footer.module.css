@@ -6,3 +6,7 @@
 .Footer > div{
     width: 50%;
 }
+.link > li{
+    float: left;
+    text-decoration: none;
+}
