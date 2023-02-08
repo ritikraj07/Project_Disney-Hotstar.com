@@ -1,6 +1,6 @@
 import Style from "../CSS/Bannercard.module.css";
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/skyblue';
 function Bannercard() {
     return (
 
