@@ -33,6 +33,7 @@
 .navbar > div:nth-child(2) >div{
     margin: 0 10px;
     cursor: pointer;
+    
 }
 .navbar input{
     outline: none;
@@ -43,6 +44,11 @@
     border-bottom: 2px solid rgba(255, 255, 255, 0.931);
     color: white;
     
+    
+}
+.navbar input:focus {
+    /* border: 1px solid red; */
+    padding-right: 25px;
 }
 .navbar input::placeholder{
     color: white;
@@ -54,4 +60,8 @@
     border: none;
     cursor: pointer;
 }
-
+.navbar >div:nth-child(2) >div:nth-child(2){
+    background-color: rgb(56, 56, 220);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+}

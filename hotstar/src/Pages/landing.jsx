@@ -3,6 +3,7 @@ import Bannercard from "../Components/Bannercard";
 import Card from "../Components/Card";
 import CardList from "../Components/CardList";
 import Footer from "../Components/footer";
+import HCardList from "../Components/HCardList";
 
 function Landing(props) {
   let Getdata = async () => {
@@ -31,7 +32,7 @@ function Landing(props) {
       </section>
       <section>
         {/* map cards for Best in Spoorts */}
-        <CardList
+        <HCardList
           url={
             "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2014"
           }
@@ -55,7 +56,7 @@ function Landing(props) {
         {/* map cards for Popular in Action */}
         <CardList
           url={
-            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2016"
           }
           title={"Popular in Action"}
           type={""}
@@ -66,7 +67,7 @@ function Landing(props) {
         {/* map cards for Popular Movies */}
         <CardList
           url={
-            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
+            "https://api.themoviedb.org/3/trending/tv/week?api_key=ed9752e73a9c3448abd38b33a4340499"
           }
           title={"Popular Movies"}
           type={""}
