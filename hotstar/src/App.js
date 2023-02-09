@@ -13,7 +13,7 @@ function App() {
  
       {/* <Signup/> */}
 
-      <Signup/>
+     
     
     </ChakraProvider>
   );
