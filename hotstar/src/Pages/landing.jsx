@@ -84,7 +84,9 @@ function Landing(props) {
           id={id++}
         />
       </section>
-      <section>{/* footer */}</section>
+      <section>
+        <Footer />
+      </section>
     </div>
   );
 }

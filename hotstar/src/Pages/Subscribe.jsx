@@ -10,24 +10,33 @@ const Subscribe = () => {
     // const [plan1, setPlan1] = useState({false});
     // const [plan2, setPlan2] = useState(false);
     // const [plan3, setPlan3] = useState(false);
-    const pstyle={
-        color:"#fcde7b",
-        backgroundImage:"rgb(23,67,115)",
-
+   
+    
+    function planA() {
+        setPlan1(true)
+        setPlan2(false)
+        setPlan3(false)
+        console.log(plan1, plan2, plan3)
     }
-    const Nstyle={
-        color:"white",
-        backgroundImage:"transparent",
-
+    function planB() {
+        setPlan1(false)
+        setPlan2(true)
+        setPlan3(false)
+        console.log(plan1, plan2, plan3)
+    }
+    function planC() {
+        setPlan1(false)
+        setPlan2(false)
+        setPlan3(true)
+        console.log(plan1, plan2, plan3)
     }
 
 
-
-    const setplan = (b) => {
-        switch (1) {
-            case 1:
-        }
-    }
+    // const setplan =(b)=>{
+    //  switch(1){
+    //     case 1 :
+    //  }
+    // }
 
 
 
@@ -97,30 +106,16 @@ const Subscribe = () => {
 
                 </table>
                 <div className="planbutton">
-                    <button onClick={()=>{setPlan1(true)
-                        setPlan2(false) 
-                        setPlan3(false)} } 
-                        style={setPlan1 ?  pstyle:Nstyle}
-                        >
-                        <h3 >Super</h3>
+                    <button onClick={()=>planA()} >
+                        <h3 style={plan1 ? { color: "#fcde7b" } : { color: "white" }}>Super</h3>
                         <h2>₹899/Year</h2>
-                    </button  >
-
-                    <button onClick={()=>{setPlan1(false)
-                        setPlan2(true) 
-                        setPlan3(false)}}
-                        style={setPlan2 ? pstyle:Nstyle}
-                        >
-                        <h3 >Premium</h3>
-                        <h2 >₹1499/Year</h2>
                     </button>
-
-                    <button onClick={()=>{setPlan1(false)
-                        setPlan2(false) 
-                        setPlan3(true)}}
-                        style={setPlan3 ? pstyle:Nstyle}
-                        >
-                        <h3 >Premium</h3>
+                    <button onClick={()=>planB()}>
+                        <h3 style={plan2 ? { color: "#fcde7b" } : { color: "white" }}>Premium</h3>
+                        <h2>₹1499/Year</h2>
+                    </button>
+                    <button onClick={()=>planC()}>
+                        <h3 style={plan3 ?{ color: "#fcde7b" } : { color: "white" }}>Premium</h3>
                         <h2>₹299/Month</h2>
                     </button>
                 </div>
