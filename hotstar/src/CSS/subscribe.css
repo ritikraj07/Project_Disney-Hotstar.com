@@ -29,7 +29,7 @@ body{
     border: none;
     padding: 5px;
     margin-top: 12px;
-
+    cursor: pointer;
 }
 
 .heading {
@@ -97,7 +97,7 @@ td>h6 {
     width: 35%;
     height: 80px;
     border-radius: 5px;
-
+    cursor: pointer;
 
 
 }
@@ -106,6 +106,7 @@ td>h6 {
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    cursor: pointer;
 
 }
 
