@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Bannercard from "../Components/Bannercard";
 import Card from "../Components/Card";
 import CardList from "../Components/CardList";
 import Footer from "../Components/footer";
@@ -17,6 +18,7 @@ function Landing(props) {
   return (
     <div>
       {/* map header videos  */}
+      <Bannercard />
       <section>
         {/* map cards for Latest & Trending */}
         <CardList
@@ -31,7 +33,7 @@ function Landing(props) {
         {/* map cards for Best in Spoorts */}
         <CardList
           url={
-            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2014"
           }
           title={"Best in Spoorts"}
           type={""}
@@ -42,7 +44,7 @@ function Landing(props) {
         {/* map cards for Popular Shows */}
         <CardList
           url={
-            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
           }
           title={"Popular Shows"}
           type={""}

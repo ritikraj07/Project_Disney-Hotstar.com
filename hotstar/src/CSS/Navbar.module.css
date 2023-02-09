@@ -1,6 +1,12 @@
 .navbar{
     display: flex;
     /* width: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: rgb(20,26,40);
     /* border: 1px solid gray; */
 }
 
@@ -48,3 +54,4 @@
     border: none;
     cursor: pointer;
 }
+
