@@ -24,7 +24,7 @@ function Card({e}) {
             <img className={styles.cardImg} src={`https://image.tmdb.org/t/p/w1280${e.poster_path}`} />
             <div className={styles.movieDetailsDiv} style={style} >
                 <p className={styles.cardText} >{e.title}</p>
-                <p className={styles.cardText} >{e.adult?<p>18+</p>:<p>13+</p>}</p>
+                <p className={styles.cardText} >{e.adult?"18+":"13+"}</p>
                 <p className={styles.cardText} ></p>
                 <button className={styles.cardMovieWatchbtm}>WATCH NOW </button>
                 <button className={styles.cardMovieWatchbtm}>+ ADD TO WATCHLIST</button>

@@ -1,9 +1,10 @@
 .cardDiv {
   position: relative;
-  width: 138px;
+  min-width: 138px;
   cursor: pointer;
   transition: all 0.5s ease-in;
   margin: 20px;
+  flex: 1 1 0%;
 }
 .cardDiv:hover{
   transform: scale(1.25);
