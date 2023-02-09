@@ -92,7 +92,7 @@ td>h6 {
 }
 
 .planbutton>button {
-    border: 1px solid #334366;
+    /* border: 1px solid ; */
     /* background-color: transparent; */
     width: 35%;
     height: 80px;
@@ -107,13 +107,14 @@ td>h6 {
     justify-content: space-between;
     gap: 20px;
     cursor: pointer;
+    margin-top: 10px;
 
 }
 
 .planbutton h2 {
     text-align: left;
     margin: 0px;
-    /* color: white; */
+    color: white;
 
 }
 
