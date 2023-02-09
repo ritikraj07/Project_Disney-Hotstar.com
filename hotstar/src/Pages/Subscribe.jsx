@@ -12,13 +12,31 @@ const Subscribe = () => {
     // const [plan3, setPlan3] = useState(false);
    
     
-
-
-    const setplan =(b)=>{
-     switch(1){
-        case 1 :
-     }
+    function planA() {
+        setPlan1(true)
+        setPlan2(false)
+        setPlan3(false)
+        console.log(plan1, plan2, plan3)
     }
+    function planB() {
+        setPlan1(false)
+        setPlan2(true)
+        setPlan3(false)
+        console.log(plan1, plan2, plan3)
+    }
+    function planC() {
+        setPlan1(false)
+        setPlan2(false)
+        setPlan3(true)
+        console.log(plan1, plan2, plan3)
+    }
+
+
+    // const setplan =(b)=>{
+    //  switch(1){
+    //     case 1 :
+    //  }
+    // }
 
 
 
@@ -88,23 +106,16 @@ const Subscribe = () => {
 
                 </table>
                 <div className="planbutton">
-                    <button onClick={
-                        setplan(1)
-                        // () => {setPlan1(true); setPlan2(false); setPlan3(false);}
-                    } >
-                        <h3 style={setPlan1 ? { color: "#fcde7b" } : { color: "white" }}>Super</h3>
+                    <button onClick={()=>planA()} >
+                        <h3 style={plan1 ? { color: "#fcde7b" } : { color: "white" }}>Super</h3>
                         <h2>₹899/Year</h2>
-                    </button  >
-                    <button onClick={ setplan(2)
-                        // () => {setPlan1(false); setPlan2(true); setPlan3(false);}
-                    }>
-                        <h3 style={setPlan2 ? { color: "#fcde7b" } : { color: "white" }}>Premium</h3>
+                    </button>
+                    <button onClick={()=>planB()}>
+                        <h3 style={plan2 ? { color: "#fcde7b" } : { color: "white" }}>Premium</h3>
                         <h2>₹1499/Year</h2>
                     </button>
-                    <button onClick={setplan(3)
-                        // () => {setPlan1(false); setPlan2(false); setPlan3(true);}
-                    }>
-                        <h3 style={setPlan3 ? { color: "#fcde7b" } : { color: "white" }}>Premium</h3>
+                    <button onClick={()=>planC()}>
+                        <h3 style={plan3 ?{ color: "#fcde7b" } : { color: "white" }}>Premium</h3>
                         <h2>₹299/Month</h2>
                     </button>
                 </div>
