@@ -31,7 +31,7 @@ import {
     let st= localStorage.getItem("state");
 
 
-    const [state,setState]= React.useState("");
+    
     const { isOpen, onClose, onOpen } = useDisclosure();
     return (
       <>
@@ -44,7 +44,7 @@ import {
             </ModalHeader>
          
             <ModalBody>
-            
+            <SignInContainer/>
             </ModalBody>
   
             <ModalFooter>

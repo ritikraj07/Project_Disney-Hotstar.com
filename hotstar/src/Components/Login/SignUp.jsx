@@ -18,8 +18,12 @@ import {
       VStack,
       Center, Text, Divider
     } from "@chakra-ui/react";
+    import { Link } from "react-router-dom";
+   import { useState } from "react";
 
     const SignInContainer=()=>{
+
+        const [state,setState]= useState("");
        return( <Container bg="#111827.0" height="sm" px="15"  py="10">
               <form
                 id="new-note"
@@ -46,9 +50,13 @@ import {
                  </HStack>
                  <Divider color="blue.400" />
                  <br></br>
+                 
+                <Link to="/Enter-OTP">
                  <Button type="submit" form="new-note" width="full" colorScheme="blue" borderRadius="0">
                 CONTINUE
               </Button>
+              </Link>
+              
                 
                  
               </FormControl>

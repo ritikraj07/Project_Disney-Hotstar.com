@@ -20,7 +20,7 @@ import {
       Radio, RadioGroup, Grid, GridItem
     } from "@chakra-ui/react";
     import { useState } from "react";
-
+    import { Link } from "react-router-dom";
 
 const UserDetails=()=>{
     const [name, setname] = useState("");
@@ -71,9 +71,11 @@ return (
                   </VStack>
                 </Stack>
                  <br></br>
+                 <Link to="/RegisterationSuccessful">
                  <Button type="submit" form="new-note" width="full" colorScheme="blue" borderRadius="0">
                 Done
               </Button>
+              </Link>
                </FormControl>
                  </VStack>
                  

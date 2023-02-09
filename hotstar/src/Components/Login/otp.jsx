@@ -18,7 +18,7 @@ import {
       VStack,
       Center, Text, Divider
     } from "@chakra-ui/react";
-
+    import { Link } from "react-router-dom";
 
 const OtpHandler=()=>{
     
@@ -43,21 +43,23 @@ return (
                  
                 <Stack spacing={3} padding="5" paddingBottom="20">
                      <HStack >
-                  <Input variant='flushed' width="16" value={one} onChange={(e) =>one=e.target.value}/>
-                 <Input variant='flushed'  width="16" value={two} onChange={(e) =>two=e.target.value}/>
-                 <Input variant='flushed'  width="16" value={three} onChange={(e) =>three=e.target.value}/>
-                 <Input variant='flushed'  width="16" value={four} onChange={(e) =>four=e.target.value}/>
+                  <Input variant='flushed' width="16" />
+                 <Input variant='flushed'  width="16" />
+                 <Input variant='flushed'  width="16" />
+                 <Input variant='flushed'  width="16" />
                   
                 </HStack>
                 <Text color="blue.300" fontSize="sm"> <a href="">RESEND CODE</a></Text>
                 </Stack>
                 
-                 
+                <Link to="/UserDetails">
                  <Button type="submit" form="new-note" width="full" colorScheme="blue" borderRadius="0" >
                 CONTINUE
               </Button>
+              </Link>
                </FormControl>
                  </VStack>
+
                  
                  </form>
                  </Container>
