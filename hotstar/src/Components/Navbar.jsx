@@ -1,14 +1,15 @@
 import React from 'react';
 import nv from '../CSS/Navbar.module.css'
-function Navbar(props) {
+
+function Navbar() {
     return (
         <div className={nv.navbar}>
             <div>
                 <div>
-                    <i class="fa-solid fa-bars"></i>
+                    <i className="fa-solid fa-bars"></i>
                 </div>
                 <div>
-                    <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" />
+                    <img src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg" alt='hotstart'  />
                 </div>
                 <div>
                     <button>TV</button>
@@ -20,10 +21,10 @@ function Navbar(props) {
                     <button>Sports</button>
                 </div>
                 <div>
-                    <img src="https://snipboard.io/vngDdt.jpg" />
+                    <img src="https://snipboard.io/vngDdt.jpg" alt='Kids' />
                 </div>
                 <div>
-                    Music <i style={{marginLeft:"10px"}} class="fa-solid fa-music"></i>
+                    Music <i style={{marginLeft:"10px"}} className="fa-solid fa-music"></i>
                 </div>
 
 
@@ -32,7 +33,7 @@ function Navbar(props) {
                 <div>
                     <div>
                         <input placeholder='Search' />
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i className="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                 </div>
                 <div>
