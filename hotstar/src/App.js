@@ -3,6 +3,7 @@ import './App.css';
 import Landing from './Pages/landing';
 import Signup from './Components/Login/signupComponent';
 import { ChakraProvider } from '@chakra-ui/react'
+import Login from './Components/Login/Login';
 
 
 function App() {
@@ -10,7 +11,9 @@ function App() {
     <ChakraProvider>
     
  
-      
+      {/* <Signup/> */}
+
+      <Signup/>
     
     </ChakraProvider>
   );
