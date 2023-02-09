@@ -2,10 +2,12 @@ body{
     background-image: linear-gradient(rgb(12,17,27), rgb(19,19,25));
 }
 .Navigation-bar {
-    color: rgb(139, 221, 31);
+    /* color: rgb(139, 221, 31); */
     position: fixed;
     top: 0;
     width: 100%;
+    background-image: linear-gradient(rgb(12,17,27), rgb(19,19,25));
+    padding-bottom: 10px;
     
 }
 
@@ -33,7 +35,7 @@ body{
 .heading {
     color: white;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 90px;
 }
 
 .hotstar_logo {
