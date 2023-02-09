@@ -9,7 +9,9 @@ background-image: linear-gradient(to right,
                         margin: 0px 5px;
 
 }
-
+.mainBanner{
+        margin-top: 100px;
+}
 
 .child{
         width: 90%;
