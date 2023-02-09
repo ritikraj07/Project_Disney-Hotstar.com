@@ -21,14 +21,14 @@ function CardList({ url, title, type, id }) {
 
   const slideLeft = () => {
     var slider = document.getElementById(id);
-    //   console.log(slider);
+      console.log(slider);
     slider.scrollLeft = slider.scrollLeft - slider.clientWidth - 100;
     // console.log(slider.clientWidth);
   };
 
   const slideRight = () => {
     var slider = document.getElementById(id);
-    //   console.log(slider);
+      console.log(slider);
     slider.scrollLeft = slider.scrollLeft + slider.clientWidth - 100;
     // console.log(slider.clientWidth);
   };
