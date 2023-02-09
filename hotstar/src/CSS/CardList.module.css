@@ -1,22 +1,24 @@
 .cardlistdiv{
-    display: flex;
-    align-items: stretch;
+    /* display: flex; */
+    /* align-items: stretch; */
     position: relative;
     overflow:scroll;
     white-space: nowrap;
-    margin: 0 1.5rem;
+    /* margin: 0 1.5rem; */
     padding: 1rem;
     scroll-behavior: smooth;
     overscroll-behavior-inline: contain;
     scroll-snap-type: inline mandatory;
     scroll-padding-inline: 1rem;
+    height: 100%;
 }
 
-::-webkit-scrollbar {
+.cardlistdiv::-webkit-scrollbar {
     display: none;
 }
 .title{
-    color:white
+    color:white;
+    padding-inline-start: 1rem;
 }
 .listwrapper{
     position: relative;   

@@ -4,7 +4,7 @@ import Card from "./Card";
 import Loading from "./Loading";
 import cl from "../CSS/CardList.module.css";
 
-function CardList({ url, title, id }) {
+function CardList({ url, title, type, id }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -20,14 +20,14 @@ function CardList({ url, title, id }) {
   }, []);
 
   const slideLeft = () => {
-      var slider = document.getElementById(id);
+    var slider = document.getElementById(id);
     //   console.log(slider);
     slider.scrollLeft = slider.scrollLeft - slider.clientWidth - 100;
     // console.log(slider.clientWidth);
   };
 
   const slideRight = () => {
-      var slider = document.getElementById(id);
+    var slider = document.getElementById(id);
     //   console.log(slider);
     slider.scrollLeft = slider.scrollLeft + slider.clientWidth - 100;
     // console.log(slider.clientWidth);
