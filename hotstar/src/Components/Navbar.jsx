@@ -42,7 +42,7 @@ function Navbar() {
             </div>
             <div>
                 <div>
-                    <div>
+                    <div className={nv.searchdiv}>
                         <input placeholder='Search' />
                         <NavLink to='/search'>
                             <button><i className="fa-solid fa-magnifying-glass"></i></button>
@@ -51,7 +51,7 @@ function Navbar() {
                 </div>
                 <div>
                     <NavLink to='/subscribe'>
-                        <button>SUBSCRIBE</button>
+                        <button className={nv.subscribe} >SUBSCRIBE</button>
                     </NavLink>
                 </div>
                 <div>
