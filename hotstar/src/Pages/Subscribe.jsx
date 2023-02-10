@@ -22,7 +22,10 @@ const Subscribe = () => {
         setPlan1(true)
         setPlan2(false)
         setPlan3(false)
+       
+
         console.log(plan1, plan2, plan3)
+    return (<span>&#10003;</span>)
     }
     function planB() {
         setPlan1(false)
@@ -113,20 +116,23 @@ const Subscribe = () => {
                 </table>
                 <div className="planbutton">
                     <button onClick={()=>planA()}
-                    style={plan1 ?{ backgroundColor: "rgb(23,67,115)", border:"1px solid rgb(31,128,224)" } : {backgroundColor: "transparent", border:"1px solid #334366" }}
-                    >
+                    style={plan1 ?{ backgroundColor: "rgb(23,67,115)", border:"1px solid rgb(31,128,224)",  } : {backgroundColor: "transparent", border:"1px solid #334366" }}
+                    >     
+                        <span class="material-symbols-outlined" style={plan1 ? {display:"block",}:{display:"none"}}>done</span>
                         <h3 style={plan1 ? { color: "#fcde7b",} : { color: "white", }}>Super</h3>
                         <h2>₹899/Year</h2>
                     </button>
                     <button onClick={()=>planB()}
                     style={plan2 ?{ backgroundColor: "rgb(23,67,115)",border:"1px solid rgb(31,128,224)" } : {backgroundColor: "transparent",border:"1px solid #334366"  }}
                     >
+                        <span class="material-symbols-outlined" style={plan2 ? {display:"block",}:{display:"none"}}>done</span>
                         <h3 style={plan2 ? { color: "#fcde7b", } : { color: "white", }}>Premium</h3>
                         <h2>₹1499/Year</h2>
                     </button>
                     <button onClick={()=>planC()} 
                     style={plan3 ?{ backgroundColor: "rgb(23,67,115)",border:"1px solid rgb(31,128,224)" } : {backgroundColor: "transparent",border:"1px solid #334366"  }}
                     >
+                        <span class="material-symbols-outlined" style={plan3 ? {display:"block",}:{display:"none"}}>done</span>
                         <h3 style={plan3 ?{ color: "#fcde7b",} : { color: "white", }}>Premium</h3>
                         <h2>₹299/Month</h2>
                     </button>
