@@ -4,6 +4,7 @@ import Card from "./Card";
 import Loading from "./Loading";
 import cl from "../CSS/CardList.module.css";
 
+
 function CardList({ url, title, type, id }) {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
