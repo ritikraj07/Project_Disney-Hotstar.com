@@ -1,18 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 import Landing from './Pages/landing';
-import Subscribe from './Pages/Subscribe';
-
+import Signup from './Components/Login/signupComponent';
+import { ChakraProvider } from '@chakra-ui/react'
+import Login from './Components/Login/Login';
 
 
 function App() {
   return (
-    <div>
-      {/* <Landing /> */}
-      <Subscribe />
-    </div>
+    <ChakraProvider>
+    
+ 
+    
+     <Signup/>
 
+     
+    
+    </ChakraProvider>
   );
 }
 
 export default App;
+

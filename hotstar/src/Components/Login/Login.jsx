@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { auth,firebase } from '../../firebase';
 
 const Login = () => {
@@ -10,13 +11,13 @@ const Login = () => {
 
 	// Sent OTP
 	const signin = () => {
-
+       
 		if (mynumber === "" || mynumber.length < 10) return;
 
 		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 		auth.signInWithPhoneNumber(mynumber, verify).then((result) => {
 			setfinal(result);
-			alert("code sent")
+			
 			setshow(true);
 		})
 			.catch((err) => {
@@ -29,7 +30,7 @@ const Login = () => {
 	const ValidateOtp = () => {
 		console.log(otp);
 		if (otp === null || final === null)
-		
+		  console.log(final);
 			return;
 		final.confirm(otp).then((result) => {
 			alert("Verification Successful");

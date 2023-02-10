@@ -43,20 +43,20 @@ function Signup() {
 let one,two,three,four,five,six, otp;
 
 const otpgenerator=()=>{
-  otp= (one*100000)+(two*10000)+(three*1000)+(four*100)+(five*10)+six;
+  otp= (one*10000)+(two*1000)+(three*100)+(four*10)+(five*1)+six;
 }
 
   const { isOpen, onClose, onOpen } = useDisclosure();
 
-  const signin = (event) => {
-    event.preventDefault();
-
+  const signin = (e) => {
+       e.preventDefault();
 		if (phone === "" || phone.length < 10) return;
 
 		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 		auth.signInWithPhoneNumber(phone, verify).then((result) => {
 			setfinal(result);
       localStorage.setItem("Phone", phone);
+
       SetloginComp(false);
 			SetOtpComp(true);
 		})
@@ -67,14 +67,16 @@ const otpgenerator=()=>{
 	}
 
 	// Validate OTP
-	const ValidateOtp = () => {
+	const ValidateOtp = (e) => {
+    e.preventDefault();
     otpgenerator();
 		console.log(otp);
+    console.log(final);
 		if (otp === null || final === null)
-		
-			return;
+		   console.log("otp null");
+			
 		final.confirm(otp).then((result) => {
-			alert("Verification Successful");
+			
       SetOtpComp(false);
       SetdetailsComp(true);
 		}).catch((err) => {
@@ -132,8 +134,7 @@ const otpgenerator=()=>{
                         </HStack>
                         <Divider color="blue.400" />
                         <br></br>
-                        <Center>
-                        <div id="recaptcha-container"></div></Center>
+                        <div id="recaptcha-container"></div>
                         <Button
                           type="submit"
                           form="new-note"
@@ -202,6 +203,8 @@ const otpgenerator=()=>{
                     </VStack>
                   </form>
                 </Container>
+                
+                       
               </>
             ) : null}
 
