@@ -46,3 +46,25 @@ p > a{
 
 
 }
+.fb{
+    background-color: rgb(25,33,51);
+    
+    padding: 4px 12px;
+    
+}
+.twitter{
+    background-color: rgb(25,33,51);
+    
+    padding: 4px 12px;
+}
+
+.playstore{
+    background-color: rgb(25,33,51);
+    
+    padding: 4px 12px;
+}
+.appstore{
+    background-color: rgb(25,33,51);
+    
+    padding: 4px 12px;
+}
