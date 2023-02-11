@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { lazy, useEffect } from "react";
 import Bannercard from "../Components/Bannercard";
 import Card from "../Components/Card";
 import CardList from "../Components/CardList";
 import Footer from "../Components/footer";
 import HCardList from "../Components/HCardList";
+import { LATESTANDTRENDING } from "../Redux/Actions/actionType";
 
 function Landing(props) {
   let Getdata = async () => {
@@ -28,6 +29,7 @@ function Landing(props) {
           }
           title={"Latest & Trending"}
           id={id++}
+          type={LATESTANDTRENDING}
         />
       </section>
       <section>
@@ -37,7 +39,7 @@ function Landing(props) {
             "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2014"
           }
           title={"Best in Spoorts"}
-          type={""}
+          type={LATESTANDTRENDING}
           id={id++}
         />
       </section>
@@ -48,7 +50,7 @@ function Landing(props) {
             "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
           }
           title={"Popular Shows"}
-          type={""}
+          type={LATESTANDTRENDING}
           id={id++}
         />
       </section>
@@ -59,7 +61,7 @@ function Landing(props) {
             "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2016"
           }
           title={"Popular in Action"}
-          type={""}
+          type={LATESTANDTRENDING}
           id={id++}
         />
       </section>
@@ -70,7 +72,7 @@ function Landing(props) {
             "https://api.themoviedb.org/3/trending/tv/week?api_key=ed9752e73a9c3448abd38b33a4340499"
           }
           title={"Popular Movies"}
-          type={""}
+          type={LATESTANDTRENDING}
           id={id++}
         />
       </section>
@@ -81,7 +83,7 @@ function Landing(props) {
             "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
           }
           title={"Top Free Movies"}
-          type={""}
+          type={LATESTANDTRENDING}
           id={id++}
         />
       </section>

@@ -36,8 +36,10 @@ function Navbar() {
                         <img src="https://snipboard.io/vngDdt.jpg" alt='Kids' />
                     </NavLink>
                 </div>
+
                 <div>
-                    Music <i style={{marginLeft:"10px"}} className="fa-solid fa-music"></i>
+                    <NavLink to='/music'>
+                        Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i></NavLink>
                 </div>
 
 
