@@ -1,0 +1,92 @@
+.Container{
+    /* max-height: calc(60vh - 70px);*/
+     min-height:40%;
+    padding: calc(3.5vw + 5px);
+    /* position: relative; */
+    position: relative;
+    background-image: linear-gradient(to right,
+            rgb(15, 16, 20) 33%,
+            rgba(15, 16, 20, 0.084) 99.9%);
+            color: white;
+}
+.BackgroundImage{
+    /* position: fixed; */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.img{
+     width: 100%;
+    /* height: 58.9%; */
+    height: 100%;
+    object-fit:cover;
+    opacity: 0.8;
+}
+.Imagetitle{
+    width: 40%;
+    text-align: left;
+}
+
+.Control{
+display: flex;
+justify-content:space-between;
+margin: 50px 0px;
+}
+
+.Controldiv{
+    display: flex;
+}
+.Controldiv>button{
+    display: block;
+    margin: 0px 19px;
+    cursor: pointer;
+}
+.lang{
+    display: flex;
+}
+
+.button {
+        border-radius: 4px;
+        background-color: #f94610;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        width: 70px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button:after {
+    /* content: '\00bb'; */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.7s;
+}
+
+.button:hover {
+    padding-right: 25px;
+}
+
+.button:hover:after {
+    opacity: 1;
+    right: 0;
+}
+
+
+
