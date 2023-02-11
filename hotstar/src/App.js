@@ -14,10 +14,10 @@ function App() {
   
   return (
   <>
-  {/* //  <Provider store={store}> */}
+   <Provider store={store}>
    {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
    <AllRoutes />
-    {/* // </Provider> */}
+     </Provider>
     </>
   );
 }
