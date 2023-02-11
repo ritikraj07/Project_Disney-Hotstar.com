@@ -19,6 +19,7 @@ function Moviedetailspage() {
     return (
         <div style={{position:"relative"
         }}>
+            
             <Moviedetails />
             
             <div style={{ display: "flex", flexWrap: "wrap", gap: "10px"}}>
