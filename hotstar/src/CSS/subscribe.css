@@ -6,9 +6,15 @@ body {
     /* color: rgb(139, 221, 31); */
     position: fixed;
     top: 0;
-    width: 100%;
+    right:0;
+    left: 0;
+    /* width: 90%; */
     background-image: linear-gradient(rgb(12, 17, 27), rgb(19, 19, 25));
     padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 
 }
 
@@ -39,17 +45,18 @@ body {
     margin-top: 90px;
 }
 
-.hotstar_logo {
+/* .hotstar_logo {
     margin-left: 43px;
     margin-top: 18px;
-}
+} */
 
 select {
-    margin-left: 930px;
+    /* margin-left: 930px; */
     padding: 7px 15px;
     color: white;
     background-color: transparent;
     border-radius: 2px;
+    margin: 0 10px;
 }
 
 select option {
@@ -58,13 +65,14 @@ select option {
 }
 
 .loginbutton {
-    margin-right: -300px;
+    /* margin-right: -200px; */
     padding: 7px 15px;
     background-color: rgb(31, 128, 224);
     color: white;
     border: none;
     border-radius: 3px;
-    margin-left: 30px;
+    width: 100px;
+    /* margin-left: 30px; */
 }
 
 table {

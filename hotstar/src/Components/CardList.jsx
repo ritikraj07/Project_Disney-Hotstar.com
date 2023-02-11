@@ -3,12 +3,18 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Card from "./Card";
 import Loading from "./Loading";
 import cl from "../CSS/CardList.module.css";
+import myAction from "../Redux/Actions/myAction";
+import { useDispatch, useSelector } from "react-redux";
 
 
 function CardList({ url, title, type, id }) {
   const [data, setData] = useState([]);
+  // let dispatch = useDispatch()
   const [loading, setLoading] = useState(false);
-
+  // let data = useSelector((store) => {
+  //   console.log(store.type)
+  //   return store[type]
+  // })
   useEffect(() => {
     setLoading(true);
     fetch(`${url}`)
@@ -18,6 +24,12 @@ function CardList({ url, title, type, id }) {
         // console.log(data.results);
         setLoading(false);
       });
+    // if (data.length === 0) {
+    //   myAction(type, url, setLoading, dispatch)
+    // } else {
+    //   setLoading(false)
+    // }
+    
   }, []);
 
   const slideLeft = () => {
