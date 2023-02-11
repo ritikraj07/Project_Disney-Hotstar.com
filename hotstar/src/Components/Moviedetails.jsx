@@ -1,15 +1,15 @@
 import Styles from "../CSS/Moviedtails.module.css";
-function Moviedetails() {
+function Moviedetails({data}) {
     return (
         <div className={Styles.Container}>
             <div className={Styles.BackgroundImage}>
-                <img src="https://wallpaperaccess.com/full/3863501.jpg" alt="" className={Styles.img} />
+            <img className={Styles.img} src={`https://image.tmdb.org/t/p/w1280${data.poster_path}`} alt=""/>
             </div>
             <div className={Styles.Imagetitle}>
                 <h4>Subscriber</h4>
-                <h2>Doctor Strange in the Multiverse of Madness</h2>
-                <h4>2 hr 6 min - 2022 - Superhero - U/A 13+</h4>
-                <h5>When the Multiverse is unlocked, Doctor Strange must enlist help from old and new allies in order to confront a surprising adversary.</h5>
+                <h2>{data.title}</h2>
+                <h4>{(data.runtime/60).toFixed(0) +" hr "+ data.runtime%60 + " mins"} </h4>
+                <h5>{data.overview}</h5>
             <div className={Styles.Control}>
                 <div>
                 <button>
@@ -18,8 +18,8 @@ function Moviedetails() {
                 </div>
 
                 <div className={Styles.Controldiv}>
-                    <button>
-                        <span>Wacth Lsit</span>
+                    <button className={Styles.btn}>
+                        <span>Wacth List</span>
                     </button>
                     <button>
                         <span>Share</span>

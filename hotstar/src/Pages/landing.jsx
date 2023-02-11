@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import Card from '../Components/Card';
-import Bannercard from '../Components/Bannercard';
-import Moviedetails from '../Components/Moviedetails';
-import Moviedetailspage from './Moviedetailspage';
-
-function Landing(props) {
-    return (
-        <div>
-            <Moviedetailspage/>
-            {/* <Moviedetails/> */}
-            {/* <Bannercard />
-            {<Card />} */}
-        </div>
-    );
-=======
 import React, { useEffect } from "react";
 import Bannercard from "../Components/Bannercard";
 import Card from "../Components/Card";
@@ -107,7 +90,6 @@ function Landing(props) {
       </section>
     </div>
   );
->>>>>>> d9aeea789d0960bf95828055a99d2b8dcc62d254
 }
 
 export default Landing;

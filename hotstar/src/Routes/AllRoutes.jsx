@@ -5,6 +5,7 @@ import Movies from "../Pages/Movies";
 import Search from "../Pages/Search";
 import Sports from "../Pages/Sports";
 import Subscribe from "../Pages/Subscribe";
+import Moviedetailspage from "../Pages/Moviedetailspage";
 import TV from "../Pages/TV";
 
 const AllRoutes =()=>{
@@ -18,8 +19,8 @@ const AllRoutes =()=>{
             <Route path="/sports" element={<Sports />}></Route>
             <Route path="/movies" element={<Movies />}></Route>
             <Route path="/tvshows" element={<TV />}></Route>
-            {/* <Route path="/movies/:id" element={<IndividualMoviePage />}></Route>
-            <Route path="/shows/:id" element={<IndividualShowPage />}></Route>
+             <Route path="/movies/:id" element={<Moviedetailspage />}></Route>
+            {/*<Route path="/shows/:id" element={<IndividualShowPage />}></Route>
             <Route path="/disney-plus" element={<DisneyPlus />}></Route> */}
             <Route path="/search" element={<Search />}></Route>
 
