@@ -101,15 +101,15 @@ const Subscribe = () => {
                         </tr>
                         <tr height="30px">
                             <td>Max video quality</td>
-                            <td style={ plan1 ? tdStyle:Nstyle}>Full HD (1080p)</td>
-                            <td style={ plan2||plan3 ? tdStyle:Nstyle}>4K (2160p)</td>
+                            <td align="center" style={ plan1 ? tdStyle:Nstyle}>Full HD (1080p)</td>
+                            <td align="center" style={ plan2||plan3 ? tdStyle:Nstyle}>4K (2160p)</td>
                         </tr>
 
 
                         <tr height="30px">
                             <td>Max audio quality</td>
-                            <td style={ plan1 ? tdStyle:Nstyle}>Dolby 5.1</td>
-                            <td style={ plan2||plan3 ? tdStyle:Nstyle}>Dolby 5.1</td>
+                            <td align="center" style={ plan1 ? tdStyle:Nstyle}>Dolby 5.1</td>
+                            <td align="center" style={ plan2||plan3 ? tdStyle:Nstyle}>Dolby 5.1</td>
                         </tr>
                     </tbody>
 

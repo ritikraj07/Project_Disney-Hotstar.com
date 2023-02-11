@@ -77,16 +77,13 @@ table {
 td {
     border-bottom: 1px solid #202731;
     padding: 10px;
-
 }
 
 td>img {
-
     width: 25px;
 }
 
 td>h6 {
-
     margin-top: 1px;
     color: rgb(28, 95, 164);
     margin-bottom: 2px;
