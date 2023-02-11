@@ -4,7 +4,7 @@ import '@splidejs/react-splide/css/skyblue';
 function Bannercard() {
     return (
 
-<Splide aria-label="My Favorite Images">
+<Splide aria-label="My Favorite Images" className={Style.mainBanner} >
   <SplideSlide>
       <div className={Style.Container}>
           <div className={Style.child}>

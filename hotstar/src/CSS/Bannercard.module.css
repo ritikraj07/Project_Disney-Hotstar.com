@@ -1,7 +1,7 @@
 .Container{
 background-image: linear-gradient(to right,
-                        rgb(15, 16, 20) 33%,
-                        rgba(15, 16, 20, 0.084) 99.9%);
+                        rgb(15, 16, 20) .1%,
+                        rgba(66, 66, 69, 0) 99.9%);
                         display: grid;
                         grid-template-columns: repeat(2,1fr);
                         gap:5px;
@@ -10,6 +10,11 @@ background-image: linear-gradient(to right,
 
 }
 
+ /* rgb(15, 16, 20) .1%,
+                        rgba(15, 16, 20, 0.084) 99.9%); */
+.mainBanner{
+        margin-top: 100px;
+}
 
 .child{
         width: 90%;

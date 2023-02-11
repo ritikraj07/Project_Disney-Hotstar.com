@@ -1,0 +1,79 @@
+.cardlistdiv{
+    /* display: flex; */
+    /* align-items: stretch; */
+    position: relative;
+    overflow:scroll;
+    white-space: nowrap;
+    /* margin: 0 1.5rem; */
+    padding: 1rem;
+    scroll-behavior: smooth;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 1rem;
+    height: 100%;
+}
+
+.cardlistdiv::-webkit-scrollbar {
+    display: none;
+}
+.title{
+    color:white;
+    padding-inline-start: 1rem;
+}
+.listwrapper{
+    position: relative;   
+}
+
+.cardlistdiv>*{
+    scroll-snap-align:start;
+
+}
+.lefticon{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    /* background-color: red; */
+    position: absolute;
+    top: 45%;
+    left: 10px;
+    /* z-index: 10; */
+    color: #fffeee;
+    transform: scale(2);
+    opacity: 50%;
+}
+.righticon{
+    height: 20px;
+    width: 20px;
+    border-radius: 50px;
+    /* background-color: red; */
+    position: absolute;
+    top: 45%;
+    right: 0;
+    /* z-index: 10; */
+    color: #fffeee;
+    transform: scale(2);
+    opacity: 50%;
+}
+.righticon:hover, .lefticon:hover{
+    opacity: 90%;
+}
+.leftarrowDiv, .rightarrowDiv{
+    /* display: none; */
+    position: absolute;
+    height: 100%;
+    width: 3rem;
+    content: "";
+    top: 0;
+}
+.leftarrowDiv{
+    left: 0;
+}
+.leftarrowDiv:hover{
+    background: linear-gradient(to right, rgba(0,0,0,0.5) 0%, transparent 100%);
+}
+.rightarrowDiv{
+    right: 0;
+}
+.rightarrowDiv:hover{
+    background: linear-gradient(to left, rgba(0,0,0,0.5)0%, transparent 100%);
+}

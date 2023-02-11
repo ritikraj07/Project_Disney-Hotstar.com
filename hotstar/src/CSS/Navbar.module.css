@@ -1,0 +1,67 @@
+.navbar{
+    display: flex;
+    /* width: 100%; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2000;
+    background-color: rgb(20,26,40);
+    /* border: 1px solid gray; */
+}
+
+.navbar>div{
+     display: flex;
+    align-items: center;
+    margin: 20px 30px;
+    color: white;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    justify-content: space-between;
+    width: 50%;
+    cursor: pointer;
+}
+
+.navbar > div:first-child{
+    /* border: 2px solid green; */
+}
+.navbar > div:nth-child(2){
+    /* border: 2px solid rgb(254, 254, 254); */
+    justify-content: end;
+
+}
+.navbar > div:nth-child(2) >div{
+    margin: 0 10px;
+    cursor: pointer;
+    
+}
+.navbar input{
+    outline: none;
+    background-color: transparent;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.931);
+    color: white;
+    
+    
+}
+.navbar input:focus {
+    /* border: 1px solid red; */
+    padding-right: 25px;
+}
+.navbar input::placeholder{
+    color: white;
+}
+
+.navbar button{
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.navbar >div:nth-child(2) >div:nth-child(2){
+    background-color: rgb(56, 56, 220);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+}
