@@ -6,10 +6,10 @@ import SubNav from './Components/SubNav';
 import { AllRoutes } from './Routes/AllRoutes';
 import { useLocation } from 'react-router-dom';
 
-
 function App() {
+
  const match = useLocation();
-  //  console.log(useMatch())
+  
   return (
    <>
    {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
