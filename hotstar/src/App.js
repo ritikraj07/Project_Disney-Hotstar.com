@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import Landing from './Pages/landing';
-import Signup from './Components/Login/signupComponent';
-import { ChakraProvider } from '@chakra-ui/react'
-import Login from './Components/Login/Login';
-
+import Navbar from './Components/Navbar';
+import SubNav from './Components/SubNav';
+import { AllRoutes } from './Routes/AllRoutes';
+import { useLocation } from 'react-router-dom';
 
 function App() {
-  return (
-    <ChakraProvider>
-    
- 
-    
-     <Signup/>
 
-     
-    
-    </ChakraProvider>
+ const match = useLocation();
+  
+  return (
+   <>
+   
+   {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
+    {/* <Navbar /> */}
+   <AllRoutes />
+  
+   </>
   );
 }
 
 export default App;
-

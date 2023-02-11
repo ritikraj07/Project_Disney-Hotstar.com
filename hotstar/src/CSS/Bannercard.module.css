@@ -1,0 +1,69 @@
+.Container{
+background-image: linear-gradient(to right,
+                        rgb(15, 16, 20) .1%,
+                        rgba(66, 66, 69, 0) 99.9%);
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        gap:5px;
+                        color: rgb(214, 202, 202);
+                        margin: 0px 5px;
+
+}
+
+ /* rgb(15, 16, 20) .1%,
+                        rgba(15, 16, 20, 0.084) 99.9%); */
+.mainBanner{
+        margin-top: 100px;
+}
+
+.child{
+        width: 90%;
+        margin: auto;
+        text-align: left;
+}
+
+.child2{
+        background-image: url("../Images//BannerImages/WakandaForever.jpg");
+        height: 400px;
+        width: 100%;
+        background-position:center;
+        background-size: cover;
+        border: none;
+        opacity: 0.9;
+}
+.child3{
+        background-image: url("../Images/BannerImages/Raid.jpg");
+                height: 400px;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                border: none;
+                opacity: 0.9;
+}
+.child4{
+        background-image: url("../Images/BannerImages/Fursat.jpg");
+                height: 400px;
+                width: 100%;
+                background-position: center;
+                background-size: cover;
+                border: none;
+                opacity: 0.9;
+}
+.child5 {
+        background-image: url("../Images/BannerImages/MSDHONI.jpg");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        opacity: 0.9;
+}
+.child6 {
+        background-image: url("../Images/BannerImages/sembi.jpg");
+        height: 400px;
+        width: 100%;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        opacity: 0.9;
+}
