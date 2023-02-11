@@ -25,7 +25,17 @@ function Moviedetails() {
                         <span>Share</span>
                     </button>
                 </div>
-            </div>
+                </div>
+                
+                <div className={Styles.lang}>
+                    <div className={Styles.wrapper}>
+                        <button className={Styles.button}>English</button>
+                    </div>
+                    <div><button className={Styles.button}>தமிழ்</button></div>
+                    <div><button className={Styles.button}>हिंदी</button></div>
+                    <div><button className={Styles.button}>తెలుగు</button></div>
+                    <div><button className={Styles.button}>ಕನ್ನಡ</button></div>
+                </div>
 
 
 
