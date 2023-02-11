@@ -2,7 +2,9 @@ import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import nv from '../CSS/Navbar.module.css'
 
+
 function Navbar() {
+    
     return (
         <div id='navbar' className={nv.navbar}>
             <div>
@@ -51,7 +53,7 @@ function Navbar() {
                 </div>
                 <div>
                     <NavLink to='/subscribe'>
-                        <button className={nv.subscribe} >SUBSCRIBE</button>
+                        <button className={nv.subscribe} onClick={()=>{localStorage.setItem('sub', true)}} >SUBSCRIBE</button>
                     </NavLink>
                 </div>
                 <div>

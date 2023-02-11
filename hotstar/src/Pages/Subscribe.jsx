@@ -55,7 +55,7 @@ const Subscribe = () => {
 
 
         }}>
-            <div className="Navigation-bar"  >
+            {/* <div className="Navigation-bar"  >
 
                 <img className="hotstar_logo"
                     src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
@@ -67,7 +67,7 @@ const Subscribe = () => {
                 </select>
                 <button className="loginbutton">Log In</button>
 
-            </div>
+            </div> */}
 
             <h2 className="heading">Subscribe to watch all content on Disney+ Hotstar </h2>
             <div className="sub_div">
@@ -101,15 +101,15 @@ const Subscribe = () => {
                         </tr>
                         <tr height="30px">
                             <td>Max video quality</td>
-                            <td style={ plan1 ? tdStyle:Nstyle}>Full HD (1080p)</td>
-                            <td style={ plan2||plan3 ? tdStyle:Nstyle}>4K (2160p)</td>
+                            <td align="center" style={ plan1 ? tdStyle:Nstyle}>Full HD (1080p)</td>
+                            <td align="center" style={ plan2||plan3 ? tdStyle:Nstyle}>4K (2160p)</td>
                         </tr>
 
 
                         <tr height="30px">
                             <td>Max audio quality</td>
-                            <td style={ plan1 ? tdStyle:Nstyle}>Dolby 5.1</td>
-                            <td style={ plan2||plan3 ? tdStyle:Nstyle}>Dolby 5.1</td>
+                            <td align="center" style={ plan1 ? tdStyle:Nstyle}>Dolby 5.1</td>
+                            <td align="center" style={ plan2||plan3 ? tdStyle:Nstyle}>Dolby 5.1</td>
                         </tr>
                     </tbody>
 

@@ -17,7 +17,7 @@ const AllRoutes =()=>{
             <Route path='/kids' element={<KidPage />} ></Route>
             {/* <Route path="/login" element={<Login />}></Route> */}
             <Route path="/sports" element={<Sports />}></Route>
-            <Route path="/movies" element={<Movies />}></Route>
+            {/* <Route path="/movies" element={<Movies />}></Route> */}
             <Route path="/tvshows" element={<TV />}></Route>
              <Route path="/movies/:id" element={<Moviedetailspage />}></Route>
             {/*<Route path="/shows/:id" element={<IndividualShowPage />}></Route>

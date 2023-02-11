@@ -20,8 +20,7 @@ function Moviedetailspage() {
     return (
         <div style={{position:"relative"
         }}>
-            <Moviedetails data={state} />
-            
+            <Moviedetails data={state} />   
         <CardList
           url={
             `https://api.themoviedb.org/3/movie/${id}/similar?api_key=fb3b71a956ae9826b4af1a7eb6799dd9&language=en-US&page=1`
