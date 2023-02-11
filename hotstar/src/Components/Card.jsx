@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "../CSS/card.module.css";
 function Card({ e }) {
@@ -18,6 +19,7 @@ function Card({ e }) {
   }
 
   return (
+    <Link to={`/movies/${e.id}`}>
     <div
       className={styles.cardDiv}
       // style={divSize}
@@ -32,7 +34,7 @@ function Card({ e }) {
       <div className={styles.imgContainer}>
         <img
           className={styles.cardImg}
-          src={`https://image.tmdb.org/t/p/w1280${e.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w1280${e.poster_path}`} alt=""
         />
       </div>
       <div className={styles.movieDetailsDiv} style={style}>
@@ -43,12 +45,14 @@ function Card({ e }) {
           <button className={styles.cardMovieWatchbtm}>WATCH NOW </button>
         </div>
         <div className={styles.btnDiv}>
+
           <button className={styles.cardMovieWatchbtm}>
             + ADD TO WATCHLIST
           </button>
         </div>
       </div>
-    </div>
+      </div>
+      </Link>
   );
 }
 
