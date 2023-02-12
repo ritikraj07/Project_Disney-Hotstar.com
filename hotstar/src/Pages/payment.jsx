@@ -2,6 +2,7 @@ import React from 'react';
 import  { useState } from "react";
 import '../CSS/payment.css'
 
+
 function Payment() {
 
     const [cardNumber, setCardNumber] = useState('');
@@ -11,6 +12,9 @@ function Payment() {
     const handleSubmit = event => {
         event.preventDefault();
     }
+
+
+
     return (
         <div>
             <form onSubmit={handleSubmit} className="form" style={{width:"70%", border:"2px solid red"}}>
