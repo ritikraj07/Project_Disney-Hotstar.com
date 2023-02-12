@@ -8,7 +8,7 @@ import Sports from "../Pages/Sports";
 import Subscribe from "../Pages/Subscribe";
 import Moviedetailspage from "../Pages/Moviedetailspage";
 import TV from "../Pages/TV";
-
+import Payment from "../Pages/payment";
 
 const AllRoutes =()=>{
     return(
