@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Landing from './Pages/landing';
+// import Landing from './Pages/landing';
 import Navbar from './Components/Navbar';
 import SubNav from './Components/SubNav';
 import { AllRoutes } from './Routes/AllRoutes';
 import { useLocation } from 'react-router-dom';
+import PaymentProcess from './Pages/Payment';
+import PaymentOption from './Pages/Payment';
 
 function App() {
 
@@ -12,9 +14,10 @@ function App() {
   
   return (
    <>
-   {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
+   {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />} 
     {/* <Navbar /> */}
-   <AllRoutes />
+    <AllRoutes />
+   {/* <PaymentOption/> */}
    </>
   );
 }

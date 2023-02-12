@@ -22,9 +22,9 @@
     cursor: pointer;
 }
 
-.navbar > div:first-child{
-    /* border: 2px solid green; */
-}
+/* .navbar > div:first-child{
+     border: 2px solid green; 
+} */
 .navbar > div:nth-child(2){
     /* border: 2px solid rgb(254, 254, 254); */
     justify-content: end;
