@@ -47,22 +47,25 @@ function MusicPlayingList({ musicData, setcurSong, curSong, setinput, secData })
 
 
     return (
-        <div className='MusicPlayerListBox' >
+        <div className='MusicPlayerListBox'  >
             <div className='MusicListHeading'>
                 <div><h2>My Music</h2></div>
                 <div>
-                    <button onClick={Mic_search}
+                    {/* <button onClick={Mic_search}
                     ><i className="fa-regular fa-bell"></i></button>
 
                     <input placeholder='Search song'
 
                         onChange={(e) => setinput(e.target.value)
                         }
-                    />
+                    /> */}
                 </div>
             </div>
             <div className='MusicbannerImage'>
-                <img src={secData.length != 0 ? secData[curSong].album.images[0].url : musicData[curSong].track.album.images[0].url} alt='' width='100%' height='200px' />
+                <img src={musicData[curSong].track.album.images[0].url}
+                    alt='' width='100%' height='200px'
+                    
+                />
             </div>
             <div className='musiclistCreter'>
                 <div>
