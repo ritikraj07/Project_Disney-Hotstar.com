@@ -7,7 +7,7 @@ function Moviedetails({ data }) {
     let [play, setplay] = useState(false)
     let img = data.backdrop_path ? data.backdrop_path : data.poster_path
     let url = `https://api.themoviedb.org/3/movie/${data.id}/videos?api_key=fb3b71a956ae9826b4af1a7eb6799dd9&language=en-US`
-
+    
     function getID() {
         fetch(url)
             .then((res) => res.json())
