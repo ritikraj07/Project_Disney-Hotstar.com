@@ -9,7 +9,8 @@ import SearchInputAndList from './SearchInputAndList';
 
 function Navbar() {
     
-    const islogin= useSelector((state)=>state.isLoggedIn);
+    //const islogin= useSelector((state)=>state.isLoggedIn);
+    const islogin=true;
     useEffect(()=>{
         console.log(islogin);
     },[islogin])

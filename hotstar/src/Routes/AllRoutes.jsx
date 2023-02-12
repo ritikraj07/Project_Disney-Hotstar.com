@@ -9,6 +9,7 @@ import Subscribe from "../Pages/Subscribe";
 import Moviedetailspage from "../Pages/Moviedetailspage";
 import TV from "../Pages/TV";
 import Payment from "../Pages/payment";
+import { Watchlist } from "../Components/watchlist";
 
 
 const AllRoutes =()=>{
@@ -29,7 +30,8 @@ const AllRoutes =()=>{
             <Route path="/music" element={<Mymusic />} ></Route>
             <Route path ="/payment" element={<Payment/>}></Route>           
              <Route path="/Login" element={<Landing />} ></Route>
-
+             <Route path="/watchlist" element={<Watchlist />} ></Route>
+            
         </Routes>
     )
 }

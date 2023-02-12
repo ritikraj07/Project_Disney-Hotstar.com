@@ -48,3 +48,18 @@ export const login = () => {
     };
   };
 
+  export const AddWatchList = (e) => {
+    return{
+      type: 'GET_WATCH_LIST',
+      payload:e,
+    };
+  };
+
+  export const removeList = (elementId) => {
+   
+   return{
+    type: 'REMOVE_LIST',
+    objectId:elementId,
+   }
+  };
+

@@ -92,7 +92,7 @@ const otpgenerator=()=>{
 	}
 
   return (
-    <>
+    <div style={{backgroundColor:"rgb(20,26,40"}}>
       <Button onClick={onOpen}>Login</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay marginTop="10"/>
@@ -346,7 +346,7 @@ const otpgenerator=()=>{
           <ModalFooter></ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </div>
   );
 }
 
