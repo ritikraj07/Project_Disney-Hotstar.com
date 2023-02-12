@@ -9,7 +9,8 @@ import {
     GET_SPORT,
     LOGIN,
     LOGOUT,
-    SUBSCRIBE
+    SUBSCRIBE,
+    GET_WATCHLIST
 } from '../Actions/actionType';
 let intialState = {
     GET_LATEST_TRENDING: [],
@@ -18,6 +19,7 @@ let intialState = {
     GET_MOVIE: [],
     GET_FREEMOVIE: [],
     GET_LIST:[],
+    GET_WATCHLIST:[],
     'movie_detail': {},
     'key_id': '',
     'isLoggedIn': false,

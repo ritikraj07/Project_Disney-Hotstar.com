@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import nv from '../CSS/Navbar.module.css'
+import nv from '../CSS/Navbar.module.css';
+import Signup from './signupComponent';
+import { Profile } from './profile';
 
 
 function Navbar() {
-    
+    const islogin= true;
     return (
         <div id='navbar' className={nv.navbar}>
             <div>
@@ -59,8 +61,14 @@ function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/login'>
-                        <button>Login</button>
+                    <NavLink to='/Login'>
+                        <button>
+                            
+                            
+                            {
+                                islogin?<Profile/>:<Signup/>
+                            }
+                        </button>
                     </NavLink>
                 </div>
             </div>

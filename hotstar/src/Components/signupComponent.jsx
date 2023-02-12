@@ -27,8 +27,9 @@ import {
 } from "@chakra-ui/react";
 import * as React from "react";
 import { useState } from "react";
-import { auth,firebase } from '../../firebase';
-
+import { firebase, auth } from "../firebase";
+import { Navigate } from "react-router-dom";
+import { MdTurnedIn } from "react-icons/md";
 function Signup() {
   const [logincomp, SetloginComp] = React.useState(true);
   const [otpcomp, SetOtpComp] = React.useState(false);
@@ -47,7 +48,7 @@ const otpgenerator=()=>{
 }
 
   const { isOpen, onClose, onOpen } = useDisclosure();
-
+ console.log(isOpen);
   const signin = (event) => {
     event.preventDefault();
 
@@ -57,7 +58,7 @@ const otpgenerator=()=>{
 		auth.signInWithPhoneNumber(phone, verify).then((result) => {
       console.log(verify);
 			setfinal(result);
-      localStorage.setItem("Phone", phone);
+     
 
       SetloginComp(false);
 			SetOtpComp(true);
@@ -87,12 +88,14 @@ const otpgenerator=()=>{
 
   return (
     <>
-      <Button onClick={onOpen}>Open</Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
+      <Button onClick={onOpen}>Login</Button>
+      <Modal isOpen={isOpen} onClose={onClose} >
+        <ModalOverlay marginTop="4"/>
         <ModalContent bg="#111827.0" color="white" borderRadius="0">
           <ModalHeader>
-            <ModalCloseButton />
+            <Navigate to ="/" />
+            <ModalCloseButton/>
+            
           </ModalHeader>
 
           <ModalBody>
@@ -216,9 +219,15 @@ const otpgenerator=()=>{
                     id="new-note"
                     onSubmit={(event) => {
                       event.preventDefault();
-                      localStorage.setItem("userName", name);
-                      localStorage.setItem("userAge", Age);
-                      localStorage.setItem("userGender", gender);
+                      const user={
+                        "userName": name,
+                        "userAge": Age,
+                        "userGender": gender,
+                        "userPhone": phone,
+                      }
+                     
+                      localStorage.setItem("user", user);
+                      localStorage.setItem("isAuth", true);
 
                       SetdetailsComp(false);
                       SetlogSuceesComp(true);
