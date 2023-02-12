@@ -1,0 +1,119 @@
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+.horizontalcard{
+    margin:0 4px;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    max-width: 212px;
+    flex: 1 1 0%;
+    /* position: relative; */
+}
+.horizontalcard:hover{
+    transform: scale(1.20);
+}
+.imgContainer2{
+    overflow: hidden;
+    border-radius: 10px;
+    width: 212px;
+    height: 120px;
+}
+.img2{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    
+}
+.titleDiv{
+    /* padding: 9px 0 12px 0; */
+    /* width: 160px; */
+ }
+ .title{
+    color: white;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+ }
+
+.movieDetailsDiv{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.6rem;
+  font-weight: 400;
+  width: 100%;
+  /* height: 70%; */
+  background-image: linear-gradient(to bottom, rgba(4,8,15,0) , #192133 , #192133 ) ;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  opacity: 1;
+
+}
+.cardText {
+    color: white;
+    /* line-height: 2px; */
+    margin: 2px;
+    margin-inline-start: 12px;
+    font-weight: 700;
+    font-size: 0.7rem;
+    width: 80%;
+    white-space: word-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    word-break: break-all; */
+    
+  }
+  .cardMovieWatchbtm {
+    border: 0;
+    font-size: 0.6rem;
+    color: white;
+    background: none;
+    cursor: pointer;
+    width: 90%;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  .cardMovieWatchbtm:hover {
+    background-color: rgb(83, 83, 83);
+  }
+  .btnDiv{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+  .plus{
+    font-size: larger;
+  }
+
+@media only screen and (max-width: 700px) {
+    .horizontalcard{
+        max-width: 170px;
+       margin: 0 5px;
+    }
+    .imgContainer2{
+      
+        width: 170px;
+       
+    }
+    .title{
+        font-size: 0.8rem;
+    }
+}
