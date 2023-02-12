@@ -21,7 +21,7 @@ getPlaylists('party', '11', spotify_token).then(function (res) {
 })
 
 getPlaylists('chill', '11', spotify_token).then(function (res) {
-    // console.log(res)
+    console.log(res)
     // displayPlaylist(res, row_two);
 })
 

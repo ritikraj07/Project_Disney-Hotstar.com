@@ -6,7 +6,7 @@ function Bannercard() {
 
     return (
 
-<Splide aria-label="My Favorite Images" >
+<Splide aria-label="My Favorite Images">
   <SplideSlide>
         <div className={Style.container}>
         <div className={Style.gradiant}></div>
