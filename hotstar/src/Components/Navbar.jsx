@@ -1,10 +1,9 @@
-import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import nv from '../CSS/Navbar.module.css'
-
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import nv from "../CSS/Navbar.module.css";
+import SearchInputAndList from "./SearchInputAndList";
 
 function Navbar() {
-
     return (
         <div id='navbar' className={nv.navbar}>
             <div>
@@ -72,12 +71,7 @@ function Navbar() {
             </div>
             <div>
                 <div>
-                    <div className={nv.searchdiv}>
-                        <input placeholder='Search' />
-                        <NavLink to='/search'>
-                            <button><i className="fa-solid fa-magnifying-glass"></i></button>
-                        </NavLink>
-                    </div>
+                    <SearchInputAndList />
                 </div>
                 <div>
                     <NavLink to='/subscribe'>
@@ -90,8 +84,11 @@ function Navbar() {
                     </NavLink>
                 </div>
             </div>
+
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default Navbar;
