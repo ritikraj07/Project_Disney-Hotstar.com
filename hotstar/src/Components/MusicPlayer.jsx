@@ -60,7 +60,7 @@ function MusicPlayer({ musicData, curSong, setcurSong}) {
                         <button disabled={curSong==0} onClick={() => { 
                             audio.pause()
                             setcurSong(curSong - 1) 
-                            }}><i className="fa-solid fa-backward"></i></button>
+                        }} style={curSong == 0 ? { color: 'black' } : { color: 'white' }}><i className="fa-solid fa-backward"></i></button>
                         <button onClick={() => handlePlayPause()}><i className={isPlaying ?"fa-solid fa-pause":"fa-solid fa-play"}></i></button>
                         <button onClick={()=>{
                             audio.pause()

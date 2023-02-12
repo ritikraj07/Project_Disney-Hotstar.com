@@ -1,6 +1,6 @@
 import React from 'react';
 import '../CSS/payment.css'
-function payment() {
+function Payment() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function payment() {
     );
 }
 
-export default payment;
+export default Payment;
