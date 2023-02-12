@@ -1,5 +1,5 @@
 .MusicPlayerListBox{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     
     color: black;
     border-radius: 4px;
@@ -41,4 +41,8 @@
 }
 .MusicbannerImage img{
     border-radius: 10px;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position:center;
 }
