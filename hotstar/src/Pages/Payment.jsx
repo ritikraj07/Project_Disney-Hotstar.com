@@ -1,20 +1,16 @@
-import React from 'react';
-import  { useState } from "react";
-import '../CSS/payment.css'
+import React, { useState } from "react";
 
 
-function Payment() {
 
+const PaymentOption = () => {
     const [cardNumber, setCardNumber] = useState('');
     const [expirationDate, setExpirationDate] = useState('');
     const [cvv, setCvv] = useState('');
 
     const handleSubmit = event => {
         event.preventDefault();
-    }
 
-
-
+    };
     return (
         <div>
             <form onSubmit={handleSubmit} className="form" style={{width:"70%", border:"2px solid red"}}>
@@ -49,7 +45,8 @@ function Payment() {
                 <button type="submit">Submit Payment</button>
             </form>
         </div>
-    );
+    )
 }
 
-export default Payment;
+export default PaymentOption;
+

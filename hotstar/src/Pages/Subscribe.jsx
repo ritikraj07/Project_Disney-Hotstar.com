@@ -1,6 +1,8 @@
 import "../CSS/subscribe.css";
 import Footer from "../Components/footer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 
 const Subscribe = () => {
@@ -41,12 +43,10 @@ const Subscribe = () => {
     }
 
 
-    // const setplan =(b)=>{
-    //  switch(1){
-    //     case 1 :
-    //  }
-    // }
 
+    function goToPayment(){
+        
+    }
 
 
     return (
@@ -137,7 +137,9 @@ const Subscribe = () => {
                         <h2>₹299/Month</h2>
                     </button>
                 </div>
-                <button className="continue-button" ><h3>CONTINUE WITH SUPER</h3></button>
+                <Link to='/payment'>
+                <button  className="continue-button"  onClick={goToPayment}><h3>CONTINUE WITH SUPER</h3></button>
+                </Link>
             </div>
 
             <div className="sub_footer">
