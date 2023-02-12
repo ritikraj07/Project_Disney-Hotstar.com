@@ -1,51 +1,33 @@
 import { useEffect,useState } from "react";
 import Moviedetails from "../Components/Moviedetails";
-import Card from "../Components/Card"
+import CardList from "../Components/CardList"
+import { useParams } from "react-router";
 function Moviedetailspage() {
-
-    const [state, setState] = useState([]);
+    let { id } = useParams();
+    const [state, setState] = useState({});
     useEffect(() => {
         getdata();
-    },[])
+    },[id])
         
     let getdata =async () => {
-        const res = await fetch(`https://api.themoviedb.org/3/trending/all/day?api_key=fb3b71a956ae9826b4af1a7eb6799dd9`);
+        const res = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=fb3b71a956ae9826b4af1a7eb6799dd9&language=en-US`);
         const data = await res.json();
-        setState([...data.results]);
-        console.log(data.results);
-        console.log(state);
+        setState(data);
+        // console.log(data);
         }
     
     return (
         <div style={{position:"relative"
         }}>
-            
-            <Moviedetails />
-            
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px"}}>
-                {/* {
-                    state.map((ele) => {
-                        return (
-                            <div style={{
-                                width: "23%", border: "2px solid black",
-                                margin:"20px 10px"
-                            }}>
-                                <img src={ele.poster_path} alt="" />
-                                <h2>{state.length}</h2>
-                            </div>
-                        )
-                    })
-
-                    
-                } */}
-
-                {
-                    state.map((ele) => { 
-                        return(<Card/>)
-                    })
-                }
-
-            </div>
+            <Moviedetails data={state} />   
+        <CardList
+          url={
+            `https://api.themoviedb.org/3/movie/${id}/similar?api_key=fb3b71a956ae9826b4af1a7eb6799dd9&language=en-US&page=1`
+          }
+          title={"More Like This"}
+                type={"GET_LIST"}
+          id={1}
+        />
         </div>
     )
 }

@@ -1,32 +1,49 @@
+import { useEffect, useState } from "react";
 import Styles from "../CSS/Moviedtails.module.css";
-function Moviedetails() {
+import Player from "./Player";
+
+function Moviedetails({ data }) {
+    let [key, setkey] = useState('')
+    let [play, setplay] = useState(false)
+    let img = data.backdrop_path ? data.backdrop_path : data.poster_path
+    let url = `https://api.themoviedb.org/3/movie/${data.id}/videos?api_key=fb3b71a956ae9826b4af1a7eb6799dd9&language=en-US`
+    
+    function getID() {
+        fetch(url)
+            .then((res) => res.json())
+            .then((jsres) => {
+                setkey(jsres.results[0].key)
+            })
+    }
+
+    useEffect(() => {
+        getID()
+    }, [play])
+    if (play && key!=undefined) {
+        return <Player id={key} onclick={(val)=>setplay(val)} />
+   }else
     return (
+
         <div className={Styles.Container}>
             <div className={Styles.BackgroundImage}>
-                <img src="https://wallpaperaccess.com/full/3863501.jpg" alt="" className={Styles.img} />
+                <img className={Styles.img} src={`https://image.tmdb.org/t/p/w1280${img}`} alt="" />
             </div>
             <div className={Styles.Imagetitle}>
                 <h4>Subscriber</h4>
-                <h2>Doctor Strange in the Multiverse of Madness</h2>
-                <h4>2 hr 6 min - 2022 - Superhero - U/A 13+</h4>
-                <h5>When the Multiverse is unlocked, Doctor Strange must enlist help from old and new allies in order to confront a surprising adversary.</h5>
-            <div className={Styles.Control}>
-                <div>
-                <button>
-                    <span>Play</span>
-                </button>
+                <h2>{data.title}</h2>
+                <h4>{(data.runtime / 60).toFixed(0) + " hr " + data.runtime % 60 + " mins"} </h4>
+                <h5>{data.overview}</h5>
+                <div className={Styles.Control}>
+                    <div>
+                        <button onClick={() => setplay(true)}>Play</button>
+                    </div>
+
+                    <div className={Styles.Controldiv}>
+                        <button className={Styles.btn}>Watch List</button>
+                        <button>Share</button>
+                    </div>
                 </div>
 
-                <div className={Styles.Controldiv}>
-                    <button>
-                        <span>Wacth Lsit</span>
-                    </button>
-                    <button>
-                        <span>Share</span>
-                    </button>
-                </div>
-                </div>
-                
                 <div className={Styles.lang}>
                     <div className={Styles.wrapper}>
                         <button className={Styles.button}>English</button>
@@ -40,7 +57,7 @@ function Moviedetails() {
 
 
             </div>
-            
+
         </div>
     )
 }

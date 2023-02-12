@@ -1,6 +1,8 @@
 import "../CSS/subscribe.css";
 import Footer from "../Components/footer";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 
 const Subscribe = () => {
@@ -53,7 +55,7 @@ const Subscribe = () => {
 
 
         }}>
-            <div className="Navigation-bar"  >
+            {/* <div className="Navigation-bar"  >
 
                 <img className="hotstar_logo"
                     src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
@@ -65,7 +67,7 @@ const Subscribe = () => {
                 </select>
                 <button className="loginbutton">Log In</button>
 
-            </div>
+            </div> */}
 
             <h2 className="heading">Subscribe to watch all content on Disney+ Hotstar </h2>
             <div className="sub_div">
@@ -135,7 +137,9 @@ const Subscribe = () => {
                         <h2>₹299/Month</h2>
                     </button>
                 </div>
-                <button className="continue-button"  onClick={goToPayment}><h3>CONTINUE WITH SUPER</h3></button>
+                <Link to='/payment'>
+                <button  className="continue-button"  onClick={goToPayment}><h3>CONTINUE WITH SUPER</h3></button>
+                </Link>
             </div>
 
             <div className="sub_footer">

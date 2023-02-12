@@ -1,0 +1,35 @@
+.musicPlayer{
+    background-color: rgb(29,208,93);
+    padding: 40px;
+    margin: 30px;
+    border-radius: 10px;
+    height: 350px;
+    color: white;
+    position: fixed;
+}
+.musicPlayer > div:first-child{
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    /* border: 2px solid red; */
+}
+.musicPlayer > div:first-child img{
+    width: 200px;
+}
+.musicplayerDec >div:first-child{
+    text-align: center;
+    line-height: 2px;
+}
+
+.musicController{
+    display: flex;
+    justify-content: space-between;
+}
+
+.musicController button{
+    color: white;
+    font-size: larger;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
