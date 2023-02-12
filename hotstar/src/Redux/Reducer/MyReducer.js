@@ -10,7 +10,7 @@ import {
   LOGIN,
   LOGOUT,
   SUBSCRIBE,
-  SEARCH_RESULTS,,
+  SEARCH_RESULTS,
     GET_WATCHLIST
 } from "../Actions/actionType";
 let intialState = {

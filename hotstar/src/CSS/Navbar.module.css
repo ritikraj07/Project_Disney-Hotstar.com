@@ -51,6 +51,7 @@
     width: 240px;
     height: 32px;
     transition: all 0.2s;
+}
     
 
 .navbar > div:nth-child(2) > div {

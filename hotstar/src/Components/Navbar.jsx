@@ -5,6 +5,7 @@ import Signup from './signupComponent';
 import { Profile } from './profile';
 import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import SearchInputAndList from './SearchInputAndList';
 
 function Navbar() {
     
@@ -101,8 +102,8 @@ function Navbar() {
             </div>
 
         </div>
-      </div>
-    </div>
+     
+   
   );
 }
 

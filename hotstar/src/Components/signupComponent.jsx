@@ -37,9 +37,9 @@ function Signup() {
     
   //const [overlay, setOverlay] = React.useState(<OverlayTwo />)
 
-  const [logincomp, SetloginComp] = React.useState(false);
+  const [logincomp, SetloginComp] = React.useState(true);
   const [otpcomp, SetOtpComp] = React.useState(false);
-  const [detailscomp, SetdetailsComp] = React.useState(true);
+  const [detailscomp, SetdetailsComp] = React.useState(false);
   const [logsucesscomp, SetlogSuceesComp] = React.useState(false);
   const [phone, setPhone] = React.useState("+91");
   const [name, setname] = React.useState("");
