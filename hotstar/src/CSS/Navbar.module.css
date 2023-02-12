@@ -139,3 +139,20 @@
     margin: 0;
     padding: 10px;
 }
+.listTitle p{
+    color: #fff;
+    font-weight: 500;
+    font-size: smaller;
+    
+}
+.moreresults{
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    background-color: #192133;
+    /* height: 50px; */
+    border-radius: 3px;
+}
+.moreresults > button{
+    padding: 5px;
+}

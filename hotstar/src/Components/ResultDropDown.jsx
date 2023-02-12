@@ -50,13 +50,13 @@ const ResultDropDown = ({ props }) => {
         }
         return <List elem={e} key={i} />;
       })}
-      <div>
+      <div className={nv.moreresults}>
         <button
           onClick={() => {
             moreresults();
           }}
         >
-          See more results
+          MORE RESULTS
         </button>
       </div>
     </div>
