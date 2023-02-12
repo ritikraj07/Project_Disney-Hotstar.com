@@ -1,3 +1,34 @@
-form{
-    background-color: aqua;
- }
+form {
+   background-color: aqua;
+}
+
+.paylogo {
+   border: 2px solid red;
+   display: flex;
+   margin: auto;
+   margin-top: 30px;
+   margin-bottom: 100px;
+}
+
+.planname {
+   color: wheat;
+   border: 2px solid red;
+   text-align: center;
+
+}
+
+.nav {
+
+   margin: auto;
+   border: 2px solid red;
+}
+
+.pDetail {
+   color: beige;
+   text-align: center;
+   width: 40%;
+   margin: auto;
+}
+.PButton{
+   display: flex;
+}

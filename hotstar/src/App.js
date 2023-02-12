@@ -12,11 +12,12 @@ import store from './Redux/Store/MyStore';
 function App() {
 
   const match = useLocation();
-
+console.log(match.pathname)
   return (
     <>
       <Provider store={store}>
-        {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
+        {match.pathname === '/subscribe' || '/payment' ? <>{match.pathname !== '/payment'?<SubNav />: <></>}</> : <Navbar />}
+      {/* <Navbar/> */}
         <AllRoutes />
       </Provider>
     </>
