@@ -51,7 +51,7 @@ async function getPlaylists(category, limit, TOKEN) {
 
 async function getTrack(playlistID, TOKEN) {
     let res = await fetch(
-        `https://api.spotify.com/v1/playlists/${playlistID}/tracks?offset=0&limit=20`,
+        `https://api.spotify.com/v1/playlists/${playlistID}/tracks?offset=0&limit=50`,
         {
             headers: {
                 Authorization: `Bearer ${TOKEN}`,
