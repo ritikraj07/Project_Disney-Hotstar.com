@@ -1,18 +1,21 @@
+import { logout } from "../Redux/Actions/myAction";
+import { useDispatch } from "react-redux";
 
-const Dropdown = ({dropdown}) => {
 
-  const logout=()=>{
-    localStorage.setItem("isAuth",false);
-    localStorage.removeItem("user");
-
-  }
+const Dropdown = () => {
+const dispatch= useDispatch();
+  //const logout=()=>{
+    //localStorage.setItem("isAuth",false);
+   // localStorage.removeItem("user");
+   // ;
+  
     return (
       <ul type="none">
         
           <li>
             watchlist
           </li>
-          <li onClick={logout} >Logout</li>
+          <li onClick={()=>{dispatch(logout())}} >Logout</li>
       
       </ul>
     );

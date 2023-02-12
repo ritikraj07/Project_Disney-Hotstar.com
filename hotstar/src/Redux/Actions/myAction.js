@@ -28,3 +28,15 @@ export function getData(type, url, setLoading, dispatch) {
         });
 }
 
+export const login = () => {
+    return{
+      type: 'LOGIN',
+    };
+  };
+  
+  export const logout = () => {
+    return {
+      type: 'LOGOUT'
+    };
+  };
+

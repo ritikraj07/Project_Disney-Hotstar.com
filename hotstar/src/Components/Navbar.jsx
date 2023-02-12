@@ -3,10 +3,16 @@ import { Link, NavLink } from 'react-router-dom';
 import nv from '../CSS/Navbar.module.css';
 import Signup from './signupComponent';
 import { Profile } from './profile';
-
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
 
 function Navbar() {
-    const islogin= true;
+    
+    const islogin= useSelector((state)=>state.isLoggedIn);
+    useEffect(()=>{
+        console.log(islogin);
+    },[islogin])
+    console.log(islogin);
     return (
         <div id='navbar' className={nv.navbar}>
             <div>
@@ -61,12 +67,12 @@ function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/Login'>
+                    <NavLink to='/'>
                         <button>
                             
                             
                             {
-                                islogin?<Profile/>:<Signup/>
+                                islogin===true?<Profile/>:<Signup/>
                             }
                         </button>
                     </NavLink>

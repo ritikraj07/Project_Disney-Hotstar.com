@@ -27,38 +27,42 @@ import {
 } from "@chakra-ui/react";
 import * as React from "react";
 import { useState } from "react";
-import { firebase, auth } from "../firebase";
-import { Navigate } from "react-router-dom";
-import { MdTurnedIn } from "react-icons/md";
+import { auth,firebase } from '../firebase';
+import { LOGIN } from "../Redux/Actions/actionType";
+import { login} from "../Redux/Actions/myAction";
+import { useDispatch } from "react-redux";
+
 function Signup() {
-  const [logincomp, SetloginComp] = React.useState(true);
+ 
+    
+  //const [overlay, setOverlay] = React.useState(<OverlayTwo />)
+
+  const [logincomp, SetloginComp] = React.useState(false);
   const [otpcomp, SetOtpComp] = React.useState(false);
-  const [detailscomp, SetdetailsComp] = React.useState(false);
+  const [detailscomp, SetdetailsComp] = React.useState(true);
   const [logsucesscomp, SetlogSuceesComp] = React.useState(false);
   const [phone, setPhone] = React.useState("+91");
   const [name, setname] = React.useState("");
   const [gender, setgender] = React.useState("");
   const [Age, setAge] = React.useState("");
 	const [final, setfinal] = useState('');
-  
+  const dispatch=useDispatch();
 let one,two,three,four,five,six, otp;
 
 const otpgenerator=()=>{
-  otp= (one*100000)+(two*10000)+(three*1000)+(four*100)+(five*10)+six;
+  otp= (one*10000)+(two*1000)+(three*100)+(four*10)+(five*1)+six;
 }
 
   const { isOpen, onClose, onOpen } = useDisclosure();
- console.log(isOpen);
-  const signin = (event) => {
-    event.preventDefault();
 
+  const signin = (e) => {
+       e.preventDefault();
 		if (phone === "" || phone.length < 10) return;
 
 		let verify = new firebase.auth.RecaptchaVerifier('recaptcha-container');
 		auth.signInWithPhoneNumber(phone, verify).then((result) => {
-      console.log(verify);
 			setfinal(result);
-     
+      localStorage.setItem("Phone", phone);
 
       SetloginComp(false);
 			SetOtpComp(true);
@@ -70,7 +74,8 @@ const otpgenerator=()=>{
 	}
 
 	// Validate OTP
-	const ValidateOtp = () => {
+	const ValidateOtp = (e) => {
+    e.preventDefault();
     otpgenerator();
 		console.log(otp);
     console.log(final);
@@ -78,7 +83,7 @@ const otpgenerator=()=>{
 		   console.log("otp null");
 			
 		final.confirm(otp).then((result) => {
-			alert("Verification Successful");
+			
       SetOtpComp(false);
       SetdetailsComp(true);
 		}).catch((err) => {
@@ -89,13 +94,11 @@ const otpgenerator=()=>{
   return (
     <>
       <Button onClick={onOpen}>Login</Button>
-      <Modal isOpen={isOpen} onClose={onClose} >
-        <ModalOverlay marginTop="4"/>
+      <Modal isOpen={isOpen} onClose={onClose}>
+        <ModalOverlay marginTop="10"/>
         <ModalContent bg="#111827.0" color="white" borderRadius="0">
           <ModalHeader>
-            <Navigate to ="/" />
-            <ModalCloseButton/>
-            
+            <ModalCloseButton />
           </ModalHeader>
 
           <ModalBody>
@@ -220,19 +223,21 @@ const otpgenerator=()=>{
                     onSubmit={(event) => {
                       event.preventDefault();
                       const user={
-                        "userName": name,
-                        "userAge": Age,
-                        "userGender": gender,
-                        "userPhone": phone,
+                        "name":name,
+                        "Age":Age,
+                        
+                        "phone":phone
                       }
-                     
+                      
                       localStorage.setItem("user", user);
-                      localStorage.setItem("isAuth", true);
+                      localStorage.setItem("IsAuth", true);
+                      dispatch(login());
+                      
 
                       SetdetailsComp(false);
                       SetlogSuceesComp(true);
-                      // localStorage.setItem("Phone");
-                    }}
+                      }
+                    }
                   >
                     <VStack>
                       <FormControl>
@@ -259,22 +264,31 @@ const otpgenerator=()=>{
                             <Grid
                               templateColumns="repeat(2, 1fr)"
                               gap="40"
-                              color="whiteAlpha.400"
+                              
                             >
                               <GridItem>
                                 <FormHelperText fontSize="lg">
                                   Gender
                                 </FormHelperText>
                               </GridItem>
-                              <GridItem marginTop="3">
-                                {" "}
-                                <RadioGroup onChange={setgender} value={gender}>
+                              <GridItem>
+                              
+                               <HStack>
+                                 <input type="radio" id="css" name="Male" value="Male"/>
+                                 <label for="html">Male</label>
+                                 
+                              <input type="radio" id="css" name="Female" value="Female"/>
+                              <label for="css">Female</label>
+                              </HStack>
+                              </GridItem>
+                               
+                                {/*<RadioGroup onChange={setgender} value={gender}>
                                   <Stack direction="row">
                                     <Radio value="male">Male</Radio>
                                     <Radio value="female">Female</Radio>
                                   </Stack>
-                                </RadioGroup>
-                              </GridItem>
+                                </RadioGroup>*/}
+                              
                             </Grid>
                           </VStack>
                         </Stack>
@@ -321,7 +335,7 @@ const otpgenerator=()=>{
                     </div>
 
                     <Text color="white" fontSize="lg">
-                      <b>Account Created with +91{phone} </b>
+                      <b>Account Created with {phone} </b>
                     </Text>
                   </VStack>
                 </Container>

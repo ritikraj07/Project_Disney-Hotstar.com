@@ -18,8 +18,8 @@ function Card({ e }) {
     // setdivSize({ width: '138px' })
   }
 
-  const AddtoAddtowatchlist=( )=>{
-    
+  const Addtowatchlist=( )=>{
+    alert("Item added to Wishlist");
   }
 
   return (
