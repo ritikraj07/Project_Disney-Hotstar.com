@@ -47,12 +47,12 @@ function Navbar() {
                     <button>Telugu</button>
                     <button>Bhojpuri</button>
                 </div>
-                <div>
+                <div className={nv.disneyplus}>
                     <NavLink to="/sports">
                         <button>Disney+</button>
                     </NavLink>
                 </div>
-                <div>
+                <div className={nv.kidsDiv}>
                     <NavLink to='kids'>
                         <img src="https://snipboard.io/vngDdt.jpg" alt='Kids' />
                     </NavLink>
@@ -61,9 +61,10 @@ function Navbar() {
                 <div style={{
                     color: "white"
                 }}
+                className={nv.musicDiv}
                 >
                     <NavLink to='/music'>
-                        Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i>
+                        <button> Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i></button>
                     </NavLink>
                 </div>
 
