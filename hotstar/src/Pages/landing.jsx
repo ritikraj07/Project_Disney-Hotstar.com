@@ -100,6 +100,62 @@ function Landing(props) {
         />
       </section>
       <section>
+        {/* map cards for Best in Spoorts */}
+        <CardList
+          url={
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2014"
+          }
+          title={"Best in Sports"}
+          type={'GET_SPORT'}
+          id={id++}
+        />
+      </section>
+      <section>
+        {/* map cards for Popular Shows */}
+        <CardList
+          url={
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10"
+          }
+          title={"Popular Shows"}
+          type={"GET_LATEST_SHOW"}
+          id={id++}
+        />
+      </section>
+      <section>
+        {/* map cards for Popular in Action */}
+        <CardList
+          url={
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&/discover/movie?with_genres=18&primary_release_year=2016"
+          }
+          title={"Popular in Action"}
+          type={'GET_MOVIE'}
+          id={id++}
+        />
+      </section>
+      <section>
+        {/* map cards for Popular Movies */}
+        <CardList
+          url={
+            "https://api.themoviedb.org/3/trending/tv/week?api_key=ed9752e73a9c3448abd38b33a4340499"
+          }
+          title={"Popular Movies"}
+          type={'GET_MOVIE'}
+          id={id++}
+        />
+      </section>
+      <section>
+        {/* Top Free Movies */}
+        <CardList
+          url={
+            "https://api.themoviedb.org/3/movie/popular?api_key=ed9752e73a9c3448abd38b33a4340499&language=hn-US&page=1"
+          }
+          title={"Top Free Movies"}
+          type={'GET_FREEMOVIE'}
+          id={id++}
+        />
+      </section>
+
+      <section>
         <Footer />
       </section>
     </div>

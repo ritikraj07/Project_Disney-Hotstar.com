@@ -8,6 +8,7 @@ import Sports from "../Pages/Sports";
 import Subscribe from "../Pages/Subscribe";
 import Moviedetailspage from "../Pages/Moviedetailspage";
 import TV from "../Pages/TV";
+import Payment from "../Pages/payment";
 
 
 const AllRoutes =()=>{
@@ -26,7 +27,7 @@ const AllRoutes =()=>{
             <Route path="/disney-plus" element={<DisneyPlus />}></Route> */}
             <Route path="/search" element={<Search />}></Route>
             <Route path="/music" element={<Mymusic />} ></Route>
-
+            <Route path ="/payment" element={<Payment/>}></Route>
         </Routes>
     )
 }
