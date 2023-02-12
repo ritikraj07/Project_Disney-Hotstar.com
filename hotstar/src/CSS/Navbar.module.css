@@ -1,163 +1,177 @@
-.navbar{
-    display: flex;
-    /* width: 100%; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    background-color: rgb(20,26,40);
-    /* border: 1px solid gray; */
+.navbar {
+  display: flex;
+  /* width: 100%; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: rgb(20, 26, 40);
+  /* border: 1px solid gray; */
 }
 
-.navbar>div{
-     display: flex;
-    align-items: center;
-    /* margin: 20px 30px; */
-    padding: 20px 30px;
-    color: white;
-    
-    justify-content: space-between;
-    width: 50%;
-    cursor: pointer;
+.navbar > div {
+  display: flex;
+  align-items: center;
+  /* margin: 20px 30px; */
+  padding: 20px 30px;
+  color: white;
+
+  justify-content: space-between;
+  width: 50%;
+  cursor: pointer;
 }
 
-.navbar > div:first-child{
-    /* border: 2px solid green; */
+.navbar > div:first-child {
+  /* border: 2px solid green; */
 }
-.navbar > div:nth-child(2){
-    /* border: 2px solid rgb(254, 254, 254); */
-    justify-content: end;
-
+.navbar > div:nth-child(2) {
+  /* border: 2px solid rgb(254, 254, 254); */
+  justify-content: end;
 }
-.navbar > div:nth-child(2) >div{
-    margin: 0 10px;
-    cursor: pointer;
-    
+.navbar > div:nth-child(2) > div {
+  margin: 0 10px;
+  cursor: pointer;
 }
-.navbar input{
-    outline: none;
-    background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.931);
-    color: white;
-    
-    
+.navbar input {
+  outline: none;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.931);
+  color: white;
 }
 .navbar input:focus {
-    /* border: 1px solid red; */
-    padding-right: 25px;
+  /* border: 1px solid red; */
+  padding-right: 25px;
 }
-.navbar input::placeholder{
-    color: white;
-}
-
-.navbar button{
-    color: white;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-.navbar >div:nth-child(2) >div:nth-child(2){
-    background-color: rgb(31,128,224);
-    color: rgb(255, 255, 255);
-    border-radius: 4px;
-    font-weight: bolder;
-    padding-bottom: 3px;
+.navbar input::placeholder {
+  color: white;
 }
 
-.menuExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    left: 10px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
+.navbar button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
-.menuExt button{
-    margin: 10px 5px;
-}
-.Menu:hover + .menuExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
-}
-.menuExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
+.navbar > div:nth-child(2) > div:nth-child(2) {
+  background-color: rgb(31, 128, 224);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  font-weight: bolder;
+  padding-bottom: 3px;
 }
 
-.movieExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    left: 250px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
+.menuExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 10px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
 }
-.movieExt button{
-    margin: 10px 5px;
+.menuExt button {
+  margin: 10px 5px;
 }
-.movieDiv:hover + .movieExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
+.Menu:hover + .menuExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
 }
-.movieExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-}
-
-
-
-
-.tvExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    left: 170px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
-}
-.tvExt button{
-    margin: 10px 5px;
-}
-.tvDiv:hover + .tvExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
-}
-.tvExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
+.menuExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
 }
 
+.movieExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 250px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+.movieExt button {
+  margin: 10px 5px;
+}
+.movieDiv:hover + .movieExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+.movieExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+.tvExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 170px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+.tvExt button {
+  margin: 10px 5px;
+}
+.tvDiv:hover + .tvExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+.tvExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar > div:first-child > div:nth-child(4) {
+    display: none;
+  }
+  .movieDiv {
+    display: none;
+  }
+
+  .kidsDiv {
+    display: none;
+  }
+  .subscribe {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+    .disneyplus{
+        display: none;
+    }
+    /* .musicDiv{
+        display: none;
+    } */
+}

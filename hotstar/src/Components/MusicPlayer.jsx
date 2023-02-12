@@ -25,7 +25,7 @@ function MusicPlayer({ musicData, curSong, setcurSong}) {
     let name = musicData[curSong].track.name
     let des = musicData[curSong].track.album.name
     let img = musicData[curSong].track.album.images[0].url
-    let random = Math.floor(Math.random() * 51);
+    let random = Math.floor(Math.random() * 50);
     function widthChecker(word) {
         let str = ''
         for (var i = 0; i < word.length && i < 20; i++) {
