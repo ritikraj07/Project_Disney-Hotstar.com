@@ -33,9 +33,10 @@ const ResultDropDown = ({ props }) => {
   };
 
   const moreresults = () => {
+    getResults(props, dispatch);
     listRef.current.style.display = "none";
     listRef.current.value = "";
-    getResults(props, dispatch);
+    
     navigate("/search");
   };
 
@@ -50,7 +51,11 @@ const ResultDropDown = ({ props }) => {
         }
         return <List elem={e} key={i} />;
       })}
-      <div className={nv.moreresults}>
+      <div className={nv.moreresults}
+        onClick={() => {
+          moreresults();
+        }}
+      >
         <button
           onClick={() => {
             moreresults();

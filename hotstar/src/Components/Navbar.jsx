@@ -60,7 +60,7 @@ function Navbar() {
                 <div style={{
                     color: "white"
                 }}
-                className={nv.musicDiv}
+                    className={nv.musicDiv}
                 >
                     <NavLink to='/music'>
                         <button> Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i></button>
@@ -86,8 +86,6 @@ function Navbar() {
             </div>
 
         </div>
-      </div>
-    </div>
   );
 }
 
