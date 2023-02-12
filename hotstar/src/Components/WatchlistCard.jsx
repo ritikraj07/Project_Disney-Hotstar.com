@@ -1,11 +1,10 @@
 import style from "../CSS/HorizontalCard.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { AddWatchList } from "../Redux/Actions/myAction";
+import { removeList } from "../Redux/Actions/myAction";
 
-function HorizontalCard({ e }) {
-  const dispatch= useDispatch();
+function WatchlistCard({ ele }) {
+  const [watchstate, setwatchState]=useState(false);
   const [hoverStyle, setStyle] = useState({
     display: "none",
     // display: "flex", zIndex: "10"
@@ -19,20 +18,17 @@ function HorizontalCard({ e }) {
     setStyle({ display: "none", zIndex: "0" });
     // setdivSize({ width: '138px' })
   }
-  const Addtowatchlist=( )=>{
-    //watchlist.push(e)
-    dispatch(AddWatchList(e));
-  }
-  let image = e.backdrop_path || e.poster_path || "/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg";
+
+  let image = ele.backdrop_path || ele.poster_path || "/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg";
 
   return (
-    <Link to={`/movies/${e.id}`} className={style.link}>
+    <Link to={`/movies/${ele.id}`} className={style.link}>
       <div
         className={style.horizontalcard}
-        onMouseEnter={(e) => {
+        onMouseEnter={(ele) => {
           onHover();
         }}
-        onMouseLeave={(e) => {
+        onMouseLeave={(ele) => {
           offHover();
         }}
       >
@@ -44,8 +40,8 @@ function HorizontalCard({ e }) {
           />
         </div>
         <div className={style.movieDetailsDiv} style={hoverStyle}>
-          <p className={style.cardText}>{e.title}</p>
-          <p className={style.cardText}>{e.adult ? "18+" : "13+"}</p>
+          <p className={style.cardText}>{ele.title}</p>
+          <p className={style.cardText}>{ele.adult ? "18+" : "13+"}</p>
           <div className={style.btnDiv}>
             <button className={style.cardMovieWatchbtm}>
               <i className="fa-solid fa-play"></i>
@@ -53,9 +49,9 @@ function HorizontalCard({ e }) {
             </button>
           </div>
           <div className={style.btnDiv}>
-            <button className={style.cardMovieWatchbtm} onClick={Addtowatchlist}>
-              <i className="fa-solid fa-plus"></i>&nbsp;&nbsp;&nbsp;ADD TO
-              WATCHLIST
+            <button className={style.cardMovieWatchbtm} onClick={() => removeList(ele.id)}>
+              
+            <i class="fa-sharp fa-solid fa-check"></i>&nbsp;&nbsp;&nbsp;REMOVE FROM WATCHLIST
             </button>
           </div>
         </div>
@@ -64,4 +60,4 @@ function HorizontalCard({ e }) {
   );
 }
 
-export default HorizontalCard;
+export default WatchlistCard;

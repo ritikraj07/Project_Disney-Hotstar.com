@@ -20,7 +20,7 @@ let intialState = {
   GET_MOVIE: [],
   GET_FREEMOVIE: [],
   GET_LIST: [],
-    GET_WATCHLIST:[],
+    WATCHLIST:[],
   SEARCH_RESULTS: [],
   movie_detail: {},
   key_id: "",
@@ -44,6 +44,14 @@ function MyReducer(state = intialState, action) {
       return { ...state, GET_LIST: action.payload };
     case "GET_SPORT":
       return { ...state, GET_SPORT: action.payload };
+      case "GET_WATCH_LIST":
+        return{...state, WATCHLIST: [...state.WATCHLIST, action.payload] };
+
+        case "REMOVE_LIST":
+          return {
+            ...state,
+            WATCHLIST: state.WATCHLIST.filter(WATCHLIST => WATCHLIST.id !== action.objectId),
+          };
     case GET_KEY:
       return { ...state, key_id: action.payload };
     case 'LOGIN':
