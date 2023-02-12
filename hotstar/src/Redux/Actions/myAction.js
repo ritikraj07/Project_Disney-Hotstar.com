@@ -36,3 +36,15 @@ export function getResults(props, dispatch) {
     payload: props,
   });
 }
+export const login = () => {
+    return{
+      type: 'LOGIN',
+    };
+  };
+  
+  export const logout = () => {
+    return {
+      type: 'LOGOUT'
+    };
+  };
+

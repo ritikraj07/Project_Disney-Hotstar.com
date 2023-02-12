@@ -27,7 +27,9 @@ const AllRoutes =()=>{
             <Route path="/disney-plus" element={<DisneyPlus />}></Route> */}
             <Route path="/search" element={<Search />}></Route>
             <Route path="/music" element={<Mymusic />} ></Route>
-            <Route path ="/payment" element={<Payment/>}></Route>
+            <Route path ="/payment" element={<Payment/>}></Route>           
+             <Route path="/Login" element={<Landing />} ></Route>
+
         </Routes>
     )
 }

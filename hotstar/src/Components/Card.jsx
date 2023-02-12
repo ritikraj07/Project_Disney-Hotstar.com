@@ -18,6 +18,10 @@ function Card({ e }) {
     // setdivSize({ width: '138px' })
   }
 
+  const Addtowatchlist=( )=>{
+    alert("Item added to Wishlist");
+  }
+
   return (
     <Link to={`/movies/${e.id}`}>
     <div
@@ -46,7 +50,7 @@ function Card({ e }) {
         </div>
         <div className={styles.btnDiv}>
 
-          <button className={styles.cardMovieWatchbtm}>
+          <button className={styles.cardMovieWatchbtm} onClick={Addtowatchlist}>
             + ADD TO WATCHLIST
           </button>
         </div>

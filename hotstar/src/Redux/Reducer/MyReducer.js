@@ -11,6 +11,7 @@ import {
   LOGOUT,
   SUBSCRIBE,
   SEARCH_RESULTS,
+    GET_WATCHLIST
 } from "../Actions/actionType";
 let intialState = {
   GET_LATEST_TRENDING: [],
@@ -19,6 +20,7 @@ let intialState = {
   GET_MOVIE: [],
   GET_FREEMOVIE: [],
   GET_LIST: [],
+    GET_WATCHLIST:[],
   SEARCH_RESULTS: [],
   movie_detail: {},
   key_id: "",
@@ -44,9 +46,9 @@ function MyReducer(state = intialState, action) {
       return { ...state, GET_SPORT: action.payload };
     case GET_KEY:
       return { ...state, key_id: action.payload };
-    case LOGIN:
+    case 'LOGIN':
       return { ...state, isLoggedIn: true };
-    case LOGOUT:
+    case 'LOGOUT':
       return { ...state, isLoggedIn: false };
     case SUBSCRIBE:
       return { ...state, isSubscribed: true };
