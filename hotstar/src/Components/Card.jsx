@@ -10,6 +10,9 @@ function Card({ e }) {
     display: "none",
     // display: "flex", zIndex: "10"
   });
+  let islogin = useSelector((store) => {
+    return store.isLoggedIn
+  })
   // const [divSize, setdivSize] = useState({ width: '138px' })
 const dispatch= useDispatch();
   function onHover() {
@@ -26,9 +29,9 @@ const dispatch= useDispatch();
     dispatch(AddWatchList(e));
     setwatchState(false);
   }
-
+  // `/movies/${e.id}`
   return (
-    <Link to={`/movies/${e.id}`}>
+    <Link to={islogin ? `/movies/${e.id}`:`/`}>
     <div
       className={styles.cardDiv}
       // style={divSize}

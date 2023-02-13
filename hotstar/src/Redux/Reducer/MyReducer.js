@@ -24,7 +24,7 @@ let intialState = {
   SEARCH_RESULTS: [],
   movie_detail: {},
   key_id: "",
-  isLoggedIn: true,
+  isLoggedIn: false,
   isSubscribed: false,
 };
 
