@@ -1,0 +1,25 @@
+.form{
+background-color: transparent;
+display: grid;
+grid-template-columns: repeat(1, 1fr);
+margin: auto;
+margin-top: 30px;
+margin-bottom: 50px;
+}
+
+.form input{
+    border: none;
+    margin: 5px;
+    padding: 15px;
+    background-color: rgb(240,240,240);
+}
+
+.MEMBERSHIP{
+    background-color: rgb(31,128,224);
+    border: none;
+    padding: 18px 5px;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
