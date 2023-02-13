@@ -1,163 +1,231 @@
-.navbar{
-    display: flex;
-    /* width: 100%; */
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 2000;
-    background-color: rgb(20,26,40);
-    /* border: 1px solid gray; */
+.navbar > div:nth-child(2) > div {
+  margin: 0 10px;
+  cursor: pointer;
 }
+.navbar input {
+  outline: none;
+  background-color: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.931);
+  color: white;
 
-.navbar>div{
-     display: flex;
-    align-items: center;
-    /* margin: 20px 30px; */
-    padding: 20px 30px;
-    color: white;
-    
-    justify-content: space-between;
-    width: 50%;
-    cursor: pointer;
-}
-
-/* .navbar > div:first-child{
-     border: 2px solid green; 
-} */
-.navbar > div:nth-child(2){
-    /* border: 2px solid rgb(254, 254, 254); */
-    justify-content: end;
-
-}
-.navbar > div:nth-child(2) >div{
-    margin: 0 10px;
-    cursor: pointer;
-    
-}
-.navbar input{
-    outline: none;
-    background-color: transparent;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.931);
-    color: white;
-    
-    
 }
 .navbar input:focus {
-    /* border: 1px solid red; */
-    padding-right: 25px;
+  /* border: 1px solid red; */
+  padding-right: 25px;
 }
-.navbar input::placeholder{
-    color: white;
+.navbar input::placeholder {
+  color: white;
 }
 
-.navbar button{
-    color: white;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
+.navbar button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
-.navbar >div:nth-child(2) >div:nth-child(2){
-    background-color: rgb(31,128,224);
-    color: rgb(255, 255, 255);
+.navbar > div:nth-child(2) > div:nth-child(2) {
+  background-color: rgb(31, 128, 224);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  font-weight: bolder;
+  padding-bottom: 3px;
+}
+
+.menuExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 10px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+.menuExt button {
+  margin: 10px 5px;
+}
+.Menu:hover + .menuExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+.menuExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+.movieExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 250px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+.movieExt button {
+  margin: 10px 5px;
+}
+.movieDiv:hover + .movieExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+.movieExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+.tvExt {
+  position: fixed;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  top: 60px;
+  left: 170px;
+  background-color: rgb(8, 10, 15);
+  color: white;
+  border-radius: 5px;
+  padding: 10px 5px;
+  /* display: none; */
+  opacity: 0;
+  transition: height 0ms 400ms, opacity 400ms 0ms;
+}
+.tvExt button {
+  margin: 10px 5px;
+}
+.tvDiv:hover + .tvExt {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+.tvExt:hover {
+  display: flex;
+  opacity: 1;
+  transition: height 0ms 0ms, opacity 600ms 0ms;
+}
+
+@media screen and (max-width: 1000px) {
+  .navbar > div:first-child > div:nth-child(4) {
+    display: none;
+  }
+  .movieDiv {
+    display: none;
+  }
+
+  .kidsDiv {
+    display: none;
+  }
+  .subscribe {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+    .disneyplus{
+        display: none;
+    }
+    /* .musicDiv{
+        display: none;
+    } */
+}
+
+.searchBar:focus-within{
+    width: 300px;
+    border-bottom: 1px solid rgba(46, 169, 240, 0.931);
+}
+.searchIcon{
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.listResults{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    height: 88px;
+    background-color: #192133;
+    /* padding: 0.2rem 0.5rem; */
+    border-radius: 10px;
+    /* position: absolute; */
+    overflow: hidden;
+
+}
+.listImgWrapper{
+    width: 156px;
+    min-width: 156px;
+    height: 88px;
+    max-height: 88px;
+    display: inline-block;
+    text-transform: none;
+    overflow: hidden;
+    float: left;
+    border-radius: 3px 0 0 3px;
+}
+.listImgWrapper > img{
+    width: 100%;    
+    height: 100%;
+    display: block;
+    object-fit: contain;
+}
+.fiveResults{
+    position: absolute;
+    /* bottom: 0; */
+    height: auto;
+    background-color: #0c111b;
+    margin: 10px;
+    padding: 8px;
     border-radius: 4px;
-    font-weight: bolder;
-    padding-bottom: 3px;
-}
-
-.menuExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
+    display: none;
     flex-direction: column;
-    top: 60px;
-    left: 10px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
+    gap: 10px;
+    width: 300px;
 }
-.menuExt button{
-    margin: 10px 5px;
+.listTitle{
+    /* display: inline-block; */
+    /* position: absolute; */
+    width: 54%;
+    height: 100%;
+    /* left: 0;
+    top: 0; */
+    font-size: 16px;
+    color: #212121;
+    margin: 0;
+    padding: 10px;
 }
-.Menu:hover + .menuExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
+.listTitle p{
+    color: #fff;
+    font-weight: 500;
+    font-size: smaller;
+    
 }
-.menuExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
+.moreresults{
+    text-align: center;
+    padding: 5px 0;
+    width: 100%;
+    background-color: #192133;
+    /* height: 50px; */
+    border-radius: 3px;
 }
-
-.movieExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    left: 250px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
+.moreresults > button{
+    padding: 5px;
 }
-.movieExt button{
-    margin: 10px 5px;
-}
-.movieDiv:hover + .movieExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
-}
-.movieExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-}
-
-
-
-
-.tvExt{
-    position: fixed;
-    z-index: 2000;
-    display: flex;
-    flex-direction: column;
-    top: 60px;
-    left: 170px;
-    background-color: rgb(8, 10, 15);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 5px;
-    /* display: none; */
-    opacity: 0;
-    transition: height 0ms 400ms, opacity 400ms 0ms;
-}
-.tvExt button{
-    margin: 10px 5px;
-}
-.tvDiv:hover + .tvExt{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-
-}
-.tvExt:hover{
-    display: flex;
-    opacity: 1;
-    transition: height 0ms 0ms, opacity 600ms 0ms;
-}
-

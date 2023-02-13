@@ -1,10 +1,20 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import nv from '../CSS/Navbar.module.css'
-
+import nv from '../CSS/Navbar.module.css';
+import Signup from './signupComponent';
+import { Profile } from './profile';
+import { useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import SearchInputAndList from './SearchInputAndList';
 
 function Navbar() {
-
+    
+    const islogin= useSelector((state)=>state.isLoggedIn);
+    //const islogin=true;
+    useEffect(()=>{
+        console.log(islogin);
+    },[islogin])
+    console.log(islogin);
     return (
         <div id='navbar' className={nv.navbar}>
             <div>
@@ -47,12 +57,12 @@ function Navbar() {
                     <button>Telugu</button>
                     <button>Bhojpuri</button>
                 </div>
-                <div>
+                <div className={nv.disneyplus}>
                     <NavLink to="/sports">
                         <button>Disney+</button>
                     </NavLink>
                 </div>
-                <div>
+                <div className={nv.kidsDiv}>
                     <NavLink to='kids'>
                         <img src="https://snipboard.io/vngDdt.jpg" alt='Kids' />
                     </NavLink>
@@ -61,9 +71,10 @@ function Navbar() {
                 <div style={{
                     color: "white"
                 }}
+                    className={nv.musicDiv}
                 >
                     <NavLink to='/music'>
-                        Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i>
+                        <button> Music <i style={{ marginLeft: "10px" }} className="fa-solid fa-music"></i></button>
                     </NavLink>
                 </div>
 
@@ -71,12 +82,7 @@ function Navbar() {
             </div>
             <div>
                 <div>
-                    <div className={nv.searchdiv}>
-                        <input placeholder='Search' />
-                        <NavLink to='/search'>
-                            <button><i className="fa-solid fa-magnifying-glass"></i></button>
-                        </NavLink>
-                    </div>
+                    <SearchInputAndList />
                 </div>
                 <div>
                     <NavLink to='/subscribe'>
@@ -84,13 +90,20 @@ function Navbar() {
                     </NavLink>
                 </div>
                 <div>
-                    <NavLink to='/login'>
-                        <button>Login</button>
+                    <NavLink to='/'>
+                        <button>
+                            
+                            
+                            {
+                                islogin===true?<Profile/>:<Signup/>
+                            }
+                        </button>
                     </NavLink>
                 </div>
             </div>
+
         </div>
-    );
+  );
 }
 
 export default Navbar;
