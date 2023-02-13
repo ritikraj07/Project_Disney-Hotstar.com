@@ -55,11 +55,11 @@ export const login = () => {
     };
   };
 
-  export const removeList = (elementId) => {
-   
-   return{
+export const removeList = (elementId) => {
+  return{
     type: 'REMOVE_LIST',
-    objectId:elementId,
-   }
+    payload: elementId,
+  }
+   
   };
 

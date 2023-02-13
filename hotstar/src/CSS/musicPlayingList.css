@@ -1,48 +1,52 @@
 .MusicPlayerListBox{
-    background-color: rgb(255, 255, 255);
-    
-    color: black;
-    border-radius: 4px;
-    margin: 0 100px;
-    position: relative;
-    left: 400px;
+    background-color: rgb(255, 255, 255)!important;
+    color: black!important;
+    border-radius: 4px!important;
+    margin: 0 100px!important;
+    position: relative!important;
+    left: 400px!important;
 }
 .MusicListHeading{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    padding: 0 20px!important;
 }
-.MusicListHeading >div:nth-child(2){
+.MusicListHeading >div:nth-child(1){
     /* border: 2px solid red; */
     /* width: 25%; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    font-size: 25px;
+    font-weight: bolder;
+
 }
 .MusicListHeading >div:nth-child(2) input{
     /* border-top: none;
     border-left: none;
     border-right: none;
     border-bottom: 2px solid black; */
-    margin-left: 10px;
+    margin-left: 10px!important;
 }
 .musiclistCreter{
-    padding: 10px 20px;
+    padding: 10px 20px!important;
 }
 .musiclistCreter>div:first-child{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
 }
 
 .MusicbannerImage{
-    margin: 0 20px;
+    margin: 0 20px!important;
+    padding: 20px;
 }
 .MusicbannerImage img{
-    border-radius: 10px;
-    display: block;
+    border-radius: 10px!important;
+    display: block!important;
     width: 100%;
-    object-fit: cover;
-    object-position:center;
+    height: 300px;
+    object-fit: cover!important;
+    object-position:center!important;
 }

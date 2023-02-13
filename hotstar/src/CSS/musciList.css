@@ -1,24 +1,24 @@
 .musicList{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
+    display: flex!important;
+    justify-content: space-between!important;
+    align-items: center!important;
+    cursor: pointer!important;
     /* background-color: rgb(67, 75, 72); */
-    background-color: #212121d6;
-    margin: 10px 0;
-    border-radius: 5px;
-    color: white;
+    background-color: #212121d6!important;
+    margin: 10px 0!important;
+    border-radius: 5px!important;
+    color: white!important;
 }
 .musicNameDex{
-    line-height: 2px;
-    width: 300px;
+    line-height: 20px!important;
+    width: 300px!important;
 }
 .musicList >div{
-    margin: 5px 10px;
+    margin: 5px 10px!important;
 }
 .musicList button{
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
+    background-color: transparent!important;
+    color: white!important;
+    border: none!important;
+    cursor: pointer!important;
 }

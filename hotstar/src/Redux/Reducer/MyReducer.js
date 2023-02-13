@@ -24,7 +24,7 @@ let intialState = {
   SEARCH_RESULTS: [],
   movie_detail: {},
   key_id: "",
-  isLoggedIn: false,
+  isLoggedIn: true,
   isSubscribed: false,
 };
 
@@ -50,7 +50,11 @@ function MyReducer(state = intialState, action) {
         case "REMOVE_LIST":
           return {
             ...state,
-            WATCHLIST: state.WATCHLIST.filter(WATCHLIST => WATCHLIST.id !== action.objectId),
+            WATCHLIST: state.WATCHLIST.filter((ele) => {
+              if (ele.id !== action.payload) {
+                return ele
+              }
+            }),
           };
     case GET_KEY:
       return { ...state, key_id: action.payload };

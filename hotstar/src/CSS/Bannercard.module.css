@@ -7,7 +7,7 @@
   background-image: linear-gradient(
     to right,
     rgb(15, 16, 20) 33%,
-    rgba(15, 16, 20, 0.084) 99.9%
+    rgba(15, 16, 20, 0.084) 60.9%
   );
   margin-top: 5px;
 }
@@ -36,4 +36,26 @@
     rgba(15, 16, 20, 0.084) 99.9%
   );
   width: 50%;
+}
+
+@media screen and (max-width: 700px) {
+  .Imagetitle {
+    display: none;
+  }
+  .gradiant {
+    display: none;
+  }
+  .container {
+    background-image: none;
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 900px) {
+  .container {
+    
+    height: 70vh;
+  }
+  .gradiant {
+    width:30%;
+  }
 }

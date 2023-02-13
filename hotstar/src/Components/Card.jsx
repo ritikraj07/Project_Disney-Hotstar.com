@@ -61,7 +61,7 @@ const dispatch= useDispatch();
                 watchstate? <button className={styles.cardMovieWatchbtm} onClick={Addtowatchlist}>
                  <i className="fa-solid fa-plus"></i>&nbsp;&nbsp;&nbsp; ADD TO WATCHLIST
             </button>: <button className={styles.cardMovieWatchbtm} onClick={Addtowatchlist}> <i class="fa-sharp fa-solid fa-check"></i>&nbsp;&nbsp;&nbsp;
-                REMOVE FROM WATCHLIST
+                  ADDED TO WATCHLIST
             </button>
               }
                 </div>

@@ -65,3 +65,13 @@ p > a{
     background-color: rgb(25,33,51);
     padding: 4px 12px;
 }
+@media screen and (max-width:700px) {
+    .Footer, .copyright{
+        font-size: 10px;
+    }
+    .connect{
+        flex-direction: column;
+        margin-left: 90px;
+    }
+    
+}
