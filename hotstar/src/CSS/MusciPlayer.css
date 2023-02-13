@@ -1,35 +1,41 @@
 .musicPlayer{
     background-color: rgb(29,208,93);
-    padding: 40px;
-    margin: 30px;
-    border-radius: 10px;
-    height: 350px;
-    color: white;
-    position: fixed;
+    padding: 40px !important;
+    margin: 30px !important;
+    border-radius: 10px !important;
+    height: 400px !important;
+    color: white !important;
+    position: fixed !important;
 }
 .musicPlayer > div:first-child{
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
+    padding: 20px !important;
+    background-color: white !important;
+    border-radius: 5px !important;
     /* border: 2px solid red; */
 }
 .musicPlayer > div:first-child img{
-    width: 200px;
+    width: 200px !important;
+}
+.musicplayerDec{
+    margin: 20px 0;
 }
 .musicplayerDec >div:first-child{
-    text-align: center;
-    line-height: 2px;
+    text-align: center !important;
+    line-height: 20px !important;
+    margin-bottom: 10px;
 }
 
 .musicController{
-    display: flex;
-    justify-content: space-between;
+    display: flex!important;
+    justify-content: space-between!important;
+
 }
 
 .musicController button{
-    color: white;
-    font-size: larger;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
+    color: white!important;
+    font-size: larger!important;
+    background-color: transparent!important;
+    cursor: pointer!important;
+    border: none!important;
+    padding: 0 10px;
 }

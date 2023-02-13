@@ -2,6 +2,7 @@ import style from "../CSS/HorizontalCard.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { removeList } from "../Redux/Actions/myAction";
+import { useDispatch } from "react-redux";
 
 function WatchlistCard({ ele }) {
   const [watchstate, setwatchState]=useState(false);
@@ -9,6 +10,7 @@ function WatchlistCard({ ele }) {
     display: "none",
     // display: "flex", zIndex: "10"
   });
+  let dispatch = useDispatch()
 
   function onHover() {
     setStyle({ display: "flex", zIndex: "10" });
@@ -22,7 +24,7 @@ function WatchlistCard({ ele }) {
   let image = ele.backdrop_path || ele.poster_path || "/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg";
 
   return (
-    <Link to={`/movies/${ele.id}`} className={style.link}>
+    // <Link to={`/movies/${ele.id}`} className={style.link}>
       <div
         className={style.horizontalcard}
         onMouseEnter={(ele) => {
@@ -41,22 +43,24 @@ function WatchlistCard({ ele }) {
         </div>
         <div className={style.movieDetailsDiv} style={hoverStyle}>
           <p className={style.cardText}>{ele.title}</p>
-          <p className={style.cardText}>{ele.adult ? "18+" : "13+"}</p>
+        <p className={style.cardText}>{ele.adult ? "18+" : "13+"}</p>
+        <Link to={`/movies/${ele.id}`} className={style.link}>
           <div className={style.btnDiv}>
-            <button className={style.cardMovieWatchbtm}>
+            <button className={style.cardMovieWatchbtm} style={{ width: '100%', marginInlineStart:'12px'}} >
               <i className="fa-solid fa-play"></i>
               &nbsp;&nbsp;&nbsp;WATCH NOW{" "}
             </button>
           </div>
+          </Link>
           <div className={style.btnDiv}>
-            <button className={style.cardMovieWatchbtm} onClick={() => removeList(ele.id)}>
+          <button className={style.cardMovieWatchbtm} onClick={() => dispatch(removeList(ele.id))}>
               
             <i class="fa-sharp fa-solid fa-check"></i>&nbsp;&nbsp;&nbsp;REMOVE FROM WATCHLIST
             </button>
           </div>
         </div>
       </div>
-    </Link>
+    // </Link>
   );
 }
 

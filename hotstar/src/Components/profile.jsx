@@ -9,14 +9,18 @@ export const Profile = () => {
   const [dropdown, setDropdown] = useState(false);
      
   return (
-    <div>  
+    <div style={{
+      position:'relative',
+    }}
+    
+    >  
       <button type="button"
-      onClick={() => {dropdown?setDropdown(false):setDropdown(true)}}>
-  <Avatar src='https://bit.ly/broken-link'size="sm"/>
+        // onClick={() => { setDropdown(!dropdown) }}
+        onMouseEnter={() => { setDropdown(!dropdown) }}
+      >
+  <Avatar margin='0' src='https://bit.ly/broken-link'size="sm"/>
   </button>
-  {dropdown?
-    <Dropdown/>:""
-  }
+  {dropdown?<Dropdown setDropdown={setDropdown} />:""}
   
     </div>
   )

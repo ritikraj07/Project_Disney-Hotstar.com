@@ -3,31 +3,7 @@ import '../CSS/musicPlayingList.css'
 import MusicList from './MusicList';
 
 function MusicPlayingList({ musicData, setcurSong, curSong, setinput, secData }) {
-    // const [sticky, setSticky] = useState(false);
     
-    // useEffect(() => {
-    //     const handleScroll = () => {
-    //         const navbar = document.querySelector("#navbar");
-    //         const div = document.querySelector("#sticky-div");
-    //         console.log(window.scrollY, navbar.offsetTop, navbar.offsetHeight)
-    //         if (window.scrollY >= navbar.offsetTop + navbar.offsetHeight+ 380) {
-    //             div.style.top = `${navbar.offsetHeight}px`;
-    //             div.style.position = "fixed";
-    //             setSticky(true);
-    //         } else {
-    //             div.style.top = "0";
-    //             div.style.position = "relative";
-    //             setSticky(false);
-    //         }
-    //     };
-
-    //     window.addEventListener("scroll", handleScroll);
-
-    //     return () => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
-    // id = "sticky-div" style = {{ top: sticky ? "0" : "0", position: sticky ? "fixed" : "relative" }}
 
     function Mic_search() {
         window.SpeechRecognition =
@@ -63,7 +39,7 @@ function MusicPlayingList({ musicData, setcurSong, curSong, setinput, secData })
             </div>
             <div className='MusicbannerImage'>
                 <img src={musicData[curSong].track.album.images[0].url}
-                    alt='' width='100%' height='200px'
+                    alt=''
                     
                 />
             </div>

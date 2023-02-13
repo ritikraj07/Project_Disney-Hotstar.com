@@ -41,11 +41,11 @@ function Footer(props) {
                         <a  className={styles.twitter} href="https://twitter.com/DisneyPlusHS" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-square-twitter"></i></a>
                     </div>
                 </div>
-                <div class="app-unit col-xs-8">
-                    <div class="store-wrapper">
+                <div className="app-unit col-xs-8">
+                    <div className="store-wrapper">
                         <p>Disney+ Hotstar App</p>
-                        <a class={styles.playstore} href="https://play.google.com/store/apps/details?id=in.startv.hotstar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-play"></i></a>
-                        <a class={styles.appstore} href="https://itunes.apple.com/in/app/hotstar/id934459219?mt=8" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-app-store"></i></a>
+                        <a className={styles.playstore} href="https://play.google.com/store/apps/details?id=in.startv.hotstar" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-google-play"></i></a>
+                        <a className={styles.appstore} href="https://itunes.apple.com/in/app/hotstar/id934459219?mt=8" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-app-store"></i></a>
                     </div>
                 </div>
             </div>

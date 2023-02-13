@@ -9,8 +9,8 @@ import SearchInputAndList from './SearchInputAndList';
 
 function Navbar() {
     
-    const islogin= useSelector((state)=>state.isLoggedIn);
-    //const islogin=true;
+    const islogin = useSelector((state) => state.isLoggedIn);
+    // const islogin=true;
     useEffect(()=>{
         console.log(islogin);
     },[islogin])
@@ -89,16 +89,16 @@ function Navbar() {
                         <button className={nv.subscribe} onClick={() => { localStorage.setItem('sub', true) }} >SUBSCRIBE</button>
                     </NavLink>
                 </div>
-                <div>
-                    <NavLink to='/'>
+                <div className={nv.login}>
+                    {/* <NavLink to='/'> */}
                         <button>
                             
                             
                             {
-                                islogin===true?<Profile/>:<Signup/>
+                                islogin===true?<Profile/>: <Signup/>
                             }
                         </button>
-                    </NavLink>
+                    {/* </NavLink> */}
                 </div>
             </div>
 

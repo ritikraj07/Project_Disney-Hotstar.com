@@ -50,7 +50,7 @@ function Signup() {
 let one,two,three,four,five,six, otp;
 
 const otpgenerator=()=>{
-  otp= (one*10000)+(two*1000)+(three*100)+(four*10)+(five*1)+six;
+  return otp= (one*10000)+(two*1000)+(three*100)+(four*10)+(five*1)+six;
 }
 
   const { isOpen, onClose, onOpen } = useDisclosure();
@@ -77,7 +77,7 @@ const otpgenerator=()=>{
 	const ValidateOtp = (e) => {
     e.preventDefault();
     otpgenerator();
-		console.log(otp);
+		console.log(typeof otp, otp);
     console.log(final);
 		if (otp === null || final === null)
 		   console.log("otp null");
@@ -92,19 +92,19 @@ const otpgenerator=()=>{
 	}
 
   return (
-    <div style={{backgroundColor:"rgb(20,26,40"}}>
+    <div style={{ backgroundColor: "rgb(20,26,40)"}}>
       <Button onClick={onOpen}>Login</Button>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay marginTop="10"/>
         <ModalContent bg="#111827.0" color="white" borderRadius="0">
           <ModalHeader>
-            <ModalCloseButton />
+            <ModalCloseButton marginTop='10' />
           </ModalHeader>
 
           <ModalBody>
             {logincomp === true ? (
               <>
-                <Container bg="#111827.0" height="md" px="15" py="5">
+                <Container bg="#111827.0" height="md" px="15" py="5" >
                   <form
                     id="new-note"
                     onSubmit={signin}
