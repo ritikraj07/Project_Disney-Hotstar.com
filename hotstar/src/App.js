@@ -12,15 +12,18 @@ import { ChakraProvider } from '@chakra-ui/react';
 function App() {
 
   const match = useLocation();
-
+console.log(match.pathname)
   return (
+
+      
   <>
   <ChakraProvider>
    <Provider store={store}>
-   {match.pathname === '/subscribe' ? <SubNav /> : <Navbar />}
+    {match.pathname === '/subscribe' || '/payment' ? <>{match.pathname !== '/payment'?<SubNav />: <></>}</> : <Navbar />}
    <AllRoutes />
      </Provider>
      </ChakraProvider>
+
     </>
   );
 }

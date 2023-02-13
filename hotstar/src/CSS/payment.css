@@ -1,3 +1,51 @@
-/*form{
-    background-color: aqua;
- }*/
+
+.paylogo {
+  
+   display: flex;
+   margin: auto;
+   margin-top: 30px;
+   margin-bottom: 100px;
+}
+
+.planname {
+   color: wheat;
+   
+   text-align: center;
+
+}
+
+.nav {
+
+   margin: auto;
+   
+}
+
+.pDetail {
+   color: beige;
+   text-align: center;
+   width: 40%;
+   margin: auto;
+}
+
+.PButton {
+   display: grid;
+   grid-template-columns: repeat(1, 1fr);
+   background-color: transparent;
+   width: 100%;
+   margin: auto;
+   gap: 10px;
+   height: 200px;
+   margin-top: 30px;
+   margin-bottom: 50px;
+   
+}
+
+.PButton button{
+   padding: 20px;
+   width: 45%;
+   margin: auto;
+   border: none;
+   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+}
+

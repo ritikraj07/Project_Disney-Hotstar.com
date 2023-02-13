@@ -9,6 +9,7 @@ const Subscribe = () => {
     const [plan1, setPlan1] = useState(true);
     const [plan2, setPlan2] = useState(false);
     const [plan3, setPlan3] = useState(false);
+    const[plan, setplan] = useState({plan:"Super Plan", payment:"899", id:"1"})
     // const [plan1, setPlan1] = useState({false});
     // const [plan2, setPlan2] = useState(false);
     // const [plan3, setPlan3] = useState(false);
@@ -25,27 +26,30 @@ const Subscribe = () => {
         setPlan2(false)
         setPlan3(false)
        
+        setplan({plan:"Super Plan", payment:"899" ,id:"1"})
+        
 
-        console.log(plan1, plan2, plan3)
-    return (<span>&#10003;</span>)
+       
+    
     }
     function planB() {
         setPlan1(false)
         setPlan2(true)
         setPlan3(false)
-        console.log(plan1, plan2, plan3)
+        setplan({plan:"Premium Plan", payment:"1499",id:"2"})
+       
     }
     function planC() {
         setPlan1(false)
         setPlan2(false)
         setPlan3(true)
-        console.log(plan1, plan2, plan3)
+        setplan({plan:"Premium Plan", payment:"299",id:"3"})
     }
 
 
 
     function goToPayment(){
-        
+        localStorage.setItem("plan", JSON.stringify(plan));
     }
 
 
@@ -55,19 +59,7 @@ const Subscribe = () => {
 
 
         }}>
-            {/* <div className="Navigation-bar"  >
-
-                <img className="hotstar_logo"
-                    src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
-                    alt="hotstar-logo" />
-
-                <select name="language" id="lang">
-                    <option value="ENGLISH">ENGLISH</option>
-                    <option value="HINDI">हिंदी</option>
-                </select>
-                <button className="loginbutton">Log In</button>
-
-            </div> */}
+            
 
             <h2 className="heading">Subscribe to watch all content on Disney+ Hotstar </h2>
             <div className="sub_div">

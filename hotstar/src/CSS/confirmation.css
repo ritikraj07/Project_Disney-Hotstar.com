@@ -1,0 +1,25 @@
+.con{
+    margin: auto;
+    margin-top: 300px;
+    
+    width: 30%;
+    box-sizing: border-box;
+}
+
+.Oinput{
+    width: 96%;
+    padding: 15px 4px;
+    
+}
+
+.validate{
+    background-color: rgb(31,128,224);
+    border: none;
+    padding: 10px 5px;
+    color: white !important;
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    
+    
+}
