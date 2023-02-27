@@ -1,7 +1,6 @@
 import Style from "../CSS/Bannercard.module.css";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css/skyblue";
-import { useEffect } from "react";
 function Bannercard() {
   return (
     <Splide aria-label="My Favorite Images">
