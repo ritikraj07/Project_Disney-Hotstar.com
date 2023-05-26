@@ -31,7 +31,7 @@ const dispatch= useDispatch();
   }
   // `/movies/${e.id}`
   return (
-    <Link to={islogin ? `/movies/${e.id}`:`/`}>
+    <Link to={`/movies/${e.id}}`>
     <div
       className={styles.cardDiv}
       // style={divSize}
