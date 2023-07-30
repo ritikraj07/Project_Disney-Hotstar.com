@@ -35,7 +35,7 @@ function Card({ e }) {
     if (islogin) {
       window.location = `/movies/${e.id}}`
     } else {
-      window.location = ``
+      window.location = `/movies/${e.id}}`
     }
   }
   return (

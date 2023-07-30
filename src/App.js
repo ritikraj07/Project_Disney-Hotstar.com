@@ -19,7 +19,7 @@ function App() {
     <Fragment>
   <ChakraProvider>
    <Provider store={store}>
-    {match.pathname === '/subscribe' || '/payment' ? <>{match.pathname !== '/payment'?<SubNav />: <></>}</> : <Navbar />}
+    <Navbar />
    <AllRoutes />
      </Provider>
      </ChakraProvider>
