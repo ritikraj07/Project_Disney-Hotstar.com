@@ -34,7 +34,7 @@ const AllRoutes =()=>{
             <Route path="/music" element={<Mymusic />} ></Route>
             <Route path ="/confirm" element={<Confirmation/>}></Route>
             <Route path ="/payment" element={<Payment/>}></Route>           
-             <Route path="/Login" element={<Landing />} ></Route>
+             {/* <Route path="/Login" element={<Landing />} ></Route> */}
              <Route path="/watchlist" element={<Watchlist />} ></Route>
             
 

@@ -1,6 +1,6 @@
 
 import './App.css';
-
+import {Fragment} from 'react'
 import Navbar from './Components/Navbar';
 import SubNav from './Components/SubNav';
 import { AllRoutes } from './Routes/AllRoutes';
@@ -12,11 +12,11 @@ import { ChakraProvider } from '@chakra-ui/react';
 function App() {
 
   const match = useLocation();
-console.log(match.pathname)
+
   return (
 
       
-  <>
+    <Fragment>
   <ChakraProvider>
    <Provider store={store}>
     {match.pathname === '/subscribe' || '/payment' ? <>{match.pathname !== '/payment'?<SubNav />: <></>}</> : <Navbar />}
@@ -24,7 +24,7 @@ console.log(match.pathname)
      </Provider>
      </ChakraProvider>
 
-    </>
+    </Fragment>
   );
 }
 
