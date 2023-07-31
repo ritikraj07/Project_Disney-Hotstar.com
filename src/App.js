@@ -6,8 +6,10 @@ import SubNav from './Components/SubNav';
 import { AllRoutes } from './Routes/AllRoutes';
 import { useLocation } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './Redux/Store/MyStore';
+
 import { ChakraProvider } from '@chakra-ui/react';
+import { PersistGate } from 'redux-persist/integration/react'
+import {store, persistor} from './Redux/Store/MyStore';
 
 function App() {
 
@@ -17,11 +19,13 @@ function App() {
 
       
     <Fragment>
-  <ChakraProvider>
+      <ChakraProvider>
    <Provider store={store}>
+        <PersistGate loading={null} persistor={persistor} >
     <Navbar />
    <AllRoutes />
-     </Provider>
+        </PersistGate>
+          </Provider>
      </ChakraProvider>
 
     </Fragment>

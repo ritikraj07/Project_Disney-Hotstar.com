@@ -179,17 +179,17 @@ const otpgenerator=()=>{
                     <VStack>
                       <FormControl>
                         <FormLabel color="white" fontSize="lg">
-                          <b>Enter the 4-digit code Sent to +91******9304</b>
+                          <b>Enter the 4-digit code Sent to +91{phone} </b>
                         </FormLabel>
 
                         <Stack spacing={3} padding="5" paddingBottom="20">
                           <HStack>
-                            <Input variant="flushed" width="16" value={one} onChange={(e)=>one=e.target.value}/>
-                            <Input variant="flushed" width="16" value={two} onChange={(e)=>two=e.target.value}/>
-                            <Input variant="flushed" width="16"value={three} onChange={(e)=>three=e.target.value} />
-                            <Input variant="flushed" width="16"value={four} onChange={(e)=>four=e.target.value} />
-                            <Input variant="flushed" width="16"value={five} onChange={(e)=>five=e.target.value} />
-                            <Input variant="flushed" width="16"value={six} onChange={(e)=>six=e.target.value} />
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16" value={one} onChange={(e)=>one=e.target.value}/>
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16" value={two} onChange={(e)=>two=e.target.value}/>
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16"value={three} onChange={(e)=>three=e.target.value} />
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16"value={four} onChange={(e)=>four=e.target.value} />
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16"value={five} onChange={(e)=>five=e.target.value} />
+                            <Input textAlign={'center'} maxLength={1} variant="flushed" width="16"value={six} onChange={(e)=>six=e.target.value} />
                           </HStack>
                           <Text color="blue.300" fontSize="sm">
                             {" "}

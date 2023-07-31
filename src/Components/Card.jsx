@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { AddWatchList } from "../Redux/Actions/myAction";
 import styles from "../CSS/card.module.css";
 
+
 function Card({ e }) {
   const [watchstate, setwatchState] = useState(true);
   const [style, setStyle] = useState({
@@ -39,7 +40,7 @@ function Card({ e }) {
     }
   }
   return (
-
+    <Link to= {`/movies/${e.id}}`} >
     <div      
         className={styles.cardDiv}
         // style={divSize}
@@ -50,7 +51,7 @@ function Card({ e }) {
         onMouseLeave={(e) => {
           offHover();
       }}
-      onClick={() => handleCardClick()}
+      // onClick={() => handleCardClick()}
     >
       
         <div className={styles.imgContainer}>
@@ -80,6 +81,7 @@ function Card({ e }) {
           </div>
         </div>
       </div>
+    </Link>
       
       );
 }
